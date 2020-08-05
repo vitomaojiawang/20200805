@@ -13,7 +13,7 @@ public class TestController2 {
 	@RequestMapping("/test.do")
 	@ResponseBody
 	public String test() {
-		
+		System.out.println(333);
 		return "hello spring boot";
 	}
 	
