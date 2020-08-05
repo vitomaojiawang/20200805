@@ -1,0 +1,586 @@
+
+<!DOCTYPE HTML>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <title>课程列表-燕软在线教育</title>
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../../../static/inxweb/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/inxweb/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/inxweb/css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/inxweb/css/web.css">
+    <link href="../../../static/inxweb/css/mw_320_768.css" rel="stylesheet" type="text/css" media="screen and (min-width: 320px) and (max-width: 768px)">
+    <!--[if lt IE 9]>
+    <script src="../../../static/common/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="../../../static/common/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="../../../static/common/webutils.js"></script>
+    <script type="text/javascript" src="../../../static/inxweb/header/header.js"></script>
+    <script type="text/javascript" src="../../../static/inxweb/js/common.js"></script>
+
+</head>
+<body class="W-body">
+
+<!-- /global header begin-->
+<header id="header">
+    <section class="container">
+        <h1 id="logo">
+            <a href="../../../" title="燕软在线教育软件">
+                <img src="../../../static/admin/assets/logo.png" width="100%" alt="燕软在线教育软件">
+            </a>
+        </h1>
+        <div class="h-r-nsl">
+            <ul class="nav">
+                <li><a href="../index.html" title="首页" >首页</a></li>
+                <li><a href="../course/courseIndex.html" title="课程" >课程</a></li>
+                <li><a href="../teacher/tercherIndex.html" title="名师" >名师</a></li>
+                <li><a href="../acticle/acticleIndex.html" title="文章" >文章</a></li>
+            </ul>
+            <!-- / nav -->
+            <ul class="h-r-login">
+
+                <li class="undis" id="no-login">
+                    <a href="javascript:lrFun(1)" title="登录">
+                        <em class="icon18 login-icon">&nbsp;</em><span class="vam ml5">登录</span>
+                    </a>
+                    |
+                    <a href="javascript:lrFun(2)" title="注册">
+                        </em><span class="vam ml5">注册</span>
+                    </a>
+                </li>
+
+                <li class="mr10 undis" id="is-login-one"><a href="succIndex.html" title="消息" id="headerMsgCountId">
+                    <em class="icon18 news-icon">&nbsp;</em>
+                </a><q class="red-point" style="display: none">&nbsp;</q></li>
+
+                <li class="h-r-user undis" id="is-login-two"><a href="../../uc/index" title="">
+                    <img src="../../../static/inxweb/img/avatar-boy.gif" width="30" height="30" class="vam picImg" alt="">
+                    <span class="vam disIb" id="userName"></span>
+                </a>
+                    <a href="javascript:void(0)" title="退出" onclick="exit();" class="ml5">退出</a></li>
+
+                <!-- /未登录显示第1 li；登录后显示第2，3 li -->
+            </ul>
+            <aside class="h-r-search">
+                <form action="../../front/showcoulist" method="post">
+                    <label class="h-r-s-box"><input type="text" placeholder="输入你想学的课程" name="queryCourse.courseName" value="">
+                        <button type="submit" class="s-btn">
+                            <em class="icon18">&nbsp;</em>
+                        </button></label>
+                </form>
+            </aside>
+        </div>
+        <aside class="mw-nav-btn">
+            <div class="mw-nav-icon"></div>
+        </aside>
+        <div class="clear"></div>
+    </section>
+</header>
+
+<div class="bg-fa of">
+    <section class="container">
+        <section class="i-article">
+            <div class="fl col-7">
+                <section class="mr30">
+                    <section class="path-wrap txtOf hLh30">
+                        <a href="http://127.0.0.1:8088" title="首页" class="c-999 fsize14">首页</a>
+                        \
+                        <a href="../../../front/articlelist" title="" class="c-999 fsize14">文章列表</a>
+                        \ <span class="c-333 fsize14">关注·底层教育梦：先天不足 后天亏损？</span>
+                    </section>
+                    <article class="article-infor-box pr20">
+                        <h3 class="hLh30 txtOf">
+                            <span class="i-art-title">关注·底层教育梦：先天不足 后天亏损？</span>
+                        </h3>
+                        <section class="hLh30 txtOf mt5 pb20 mreadnum">
+                            <div class="fr">
+									<span> <a class="noter-dy vam" title="评论" href="#i-art-comment">
+                                        <em class="icon18">&nbsp;</em>(<span class="totalResultComment">0</span>)
+                                    </a> <tt title="赞一下" onclick="addPraise('26',3)" class="noter-zan vam ml5 f-fM">
+                                        <em class="icon18">&nbsp;</em>(<span class="addPraise26_3 praiseCount">0</span>)
+                                    </tt>
+									</span>
+                            </div>
+                            <div class="fl pt3"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-28 16:12</tt>
+                            </div>
+                        </section>
+                        <div id="art-infor-body"><p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                            原标题：关注·底层教育梦：先天不足 后天亏损？
+                        </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                对多数不能升学的底层孩子而言，与其被老师教成温顺的小绵羊，不如告诉他们真实世界的行事规则
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                大多数身处农村底层和城镇边缘家庭的孩子就近入学所就读的学校，很难成为其阶层上升流动的通道
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                这种“先天不足”与“后天更弱”的教育现实，使绝大多数底层群体早在中考前就已经和重点大学无缘
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                --
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                在知识和文凭愈来愈成为当今中国核心竞争力和时代化标签的同时，为何底层社会群体越来越无心通过文化资本的集聚来改变其底层状态？他们是天然具有根深蒂固的反智主义传统？还是因为其他因素的制约，导致他们被抛出教育这条“马拉松竞赛”的轨道？
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                笔者主持了国家社科基金课题《中国城镇化进程中西部底层孩子们阶层再生产发生的日常机制及策略干预研究》。在展开全国大样本调研基础上，笔者深入中国西部农业县——四川芥县，开展为期半年的田野工作，深入研究从幼儿园入学一直到进入就业市场的教育筛选轨道中，底层家庭是如何一步步被固化的。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                <strong>不少人即使送孩子读书，也支持“读书无用”</strong>
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                在乡间底层群体中，“读书是否有用”经常发生行为与观念上的“二元背离”。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                笔者的调研结论证明：与子女已经接受完各阶段教育的农户家庭相比，有子女正在接受各阶段教育的农户家庭对读书有用性的认同度更高。但是，他们似乎仅仅是“读书有用”的观念认同者，但却是“读书无用”的行动支持者。尽管在送孩子入学时都会叮嘱孩子要好好学习，实际上，他们并不真正把孩子的学习当回事：
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                一方面，家长任意肢解和侵占孩子的学习、休息时间，甚至在上课期间，有家长以孩子生病或转学的名义，领孩子到工地打工或到农田帮活；
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                另一方面，他们因为能力的限制而并不能真正参与到对子女的教育中来，甚至有时候因为功利、实用、短视与金钱至上的观念，而与学校主流价值观和教育实践形成抵触与反叛。升学希望渺茫与教育回报率低的尴尬现实，使他们寻找到一套属于底层的教育理性——
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                绝大多数的孩子将来都是升不了学的，这就意味着吃不了“国家饭”，他们迟早都要到社会上“谋饭吃”。与其在学校里被老师教成温顺的小绵羊，变成按书本规矩办事的“书呆子”，还不如现在就告诉孩子真实世界的行事规则。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                这是乡间底层一种无可奈何的尴尬选择。在现实中，底层因为家庭、教育、社会等多项因素影响，在通向社会阶层上层流动的教育竞争轨道中过早地被抛弃。同时，因为这种教育的高淘汰和低预期，底层孩子更快地结束了在教育筛选轨道中的旅程，提前开始了底层内部的个体社会化预演和训练。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                原标题：关注·底层教育梦：先天不足 后天亏损？
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                <strong>“邻村”幼儿园：可有可无的教育场所</strong>
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                早期的儿童教育具有特殊重要性，因为在这段时间，儿童正逐步形成他们的自我概念和社会意识，这是个体社会化的第一步。然而，第一步对于不同的儿童来讲差异甚大。在城镇中，特别是大城市，儿童被送入学费昂贵的幼儿园接受有专家指导的正规早期教育。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                一项对3000名儿童提供学前教育的研究（大部分是贫困的美国黑人）表明，接受学前教育的儿童在很多方面处在优势地位：他们很少被分到特殊班或补习班，很少有学生因成绩差而被留级；接受过学前教育的贫困家庭孩子在随后3年的标准比奈智力测试中，分数比控制组儿童高；他们保持着更强的“成就取向”，也倾向于培养比自身还要高的职业志向。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                然而，与城镇，特别是大城市的家长相比，底层农村社会中的家长却在送孩子入幼儿园上发生了困难。笔者所调研的四川芥县很多农村家庭持有这样的观点：
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                第一，诸多底层家庭认为幼儿园就是一群孩子玩的地方，可上可不上，何况家里有剩余劳动力，或自己带，或给父辈亲戚带，更能保证安全；
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                第二，幼儿园的学费普遍较贵，这是一笔不用浪费的支出，何况每天还要接送孩子，费时费力。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                事实上，这种观念的形成，在很大程度上源于底层社会学前教育发展的自身困境。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                一方面，根据公开的统计数据，中国幼儿园在2001年到2011年的年平均增长率为4.09%，其中，城镇幼儿园和县镇幼儿园年均增加率分别高达6.76%和5.86%，但农村幼儿园年均仅增加1.02%。再从2010年到2011年的全国数据来看，在城市和县镇幼儿园绝对增长数纷纷过万的情况下，农村幼儿园却锐减了12904所。2011年，全国4～6岁幼儿人数中，农村占56.91%，可农村幼儿园园数和班数却仅占全国的35.19%和33.75%。农村幼儿教育陷入到一个恶性循环之中。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                另一方面，农村幼儿园的保教人员（专任教师和保育员）非常紧缺，以全国数据为例，农村幼儿园专任教师2001到2011年间的年均增长率仅4.86%，这远低于城市和县镇的10.75%和9.51%，甚至近年来还出现了大规模减少的现象。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                因为专任教师的紧缺，在农村学校布局调整后，四川芥县被淘汰下来的农村中小学教师转到农村幼儿园任教。他们没有经过系统化和专业化的学前教育培训，只能给农村幼儿讲授小学中的各种学科知识，从而进一步加剧了农村学前教育小学化问题的严峻性和复杂性。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                由此可见，这些留守的底层群体从起跑线处的学前教育开始，就面临着各种制度性和结构性的阻滞因素和现实困难。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                原标题：关注·底层教育梦：先天不足 后天亏损？
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                <strong>就近入学：公平还是不公平</strong>
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                家住云乡最偏远村落——蜈村的杨光，是就近入学政策的严格遵守者。杨光来自典型的底层家庭：父亲早逝，母亲改嫁，一直和叔叔一家一起生活。腿部有残疾的叔叔和妻子在家务农，维持全家四口的日常生计。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                7岁时，杨光入读了本村村小——蜈村小学。作为云乡九年一贯制学校分管的一个教学点，蜈村小学中唯一的老师是一名年近六旬的民办老师。这位老师不会讲普通话，教学水平也不高。二年级时，蜈村小学因为县里调整农村学校布局而被撤并，杨光转到邻村的桥村小学读书，但该小学也仅有5名教师，其中3名还是民办教师。两年后，桥村小学在新一轮农村学校布局调整中再次被撤并。随后，杨光转到云乡九年一贯制学校。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                与杨光同村的张小理则选择了另外一条不“就近入学”的路子。在外省打工的父母坚决把他送到县城的公办民助实验小学就读，尽管父母为此交纳不菲的学费，但张小理却在更优的环境中顺利成长。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                目前已经初三的张小理尽管学习成绩不算突出，却有把握考入乡镇普通高中——寿镇中学，而当年成绩更为优秀的杨光，却只能接受根本不可能考上普通高中的事实。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                仅以<a class="a-tips-Article-QQ" href="http://edu.qq.com/en/" style="outline:none;color:#000000;text-decoration:none;border-bottom-width:1px;border-bottom-style:dotted;border-bottom-color:#536DA6;">英语</a>(<a target="_blank" href="http://class.qq.com/category/90.html" class="a-tips-Article-QQ" style="outline:none;color:#000000;text-decoration:none;border-bottom-width:1px;border-bottom-style:dotted;border-bottom-color:#536DA6;">精品课</a>)为例，杨光所读的农村学校直到七年级时才开始教授英语，而张小理所就读的县城小学，早在三年级就开始教授英语了。同样的蜈村同辈，就近入学与择校之间的英语差距就是3年。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                在一次次农村学校布局变更中，多次的就近入学经历使杨光很难跟上不同学校的教学进度，也很难迅速适应不断变换的教学风格。同时，也因为进了教学质量并不好的各类农村学校，杨光在懵懵懂懂中，从“好学生”变成了现在的“差学生”。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                众所周知，从幼儿园到大学，各种层级教育空间内部质量差异甚大：越是处于行政区划序列下端的学校，教育质量越差，反之亦然。所以，因为出生地、户口所在地、家庭条件等因素而被置于行政区划不同序列节点中的个体，会因为就近入学而被国家强迫性地分流到不同质量的学校就读。而这种客观存在的学校教育质量差异，从一开始就设定了个体能否在若干年后取得成功，并实现阶层上升流动的程序。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                对于绝大多数身处农村底层家庭和城镇边缘家庭的孩子来说，就近入学所就读的学校，只会在他们的生命历程中扮演底层再生产的功能，而很难成为其阶层上升流动的通道。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                <strong>初中后的分流：普通高中、职业高中或终止学业</strong>
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                事实上，教育分流中这种不公平的家庭资本关系在芥县也有明显体现。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                笔者在芥县教育局获得了2013年全县中考的录取信息表和家庭基本情况表。在这份录取表中，笔者选择了4所芥县的初中学校作为样本学校，它们分别是县城中的公办民助贵族式初中、县城普通公办初中、镇上普通初中、乡里的九年一贯制学校。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                按照等比例抽样原则，笔者在每所学校随机抽取了50个考生，按照学校提供的家庭收入情况调查表，将家庭年收入在10万元以上的划为上层、5～10万元的划为中上层、2～5万元的划分为中层、1～2万元的划为中下层、1万元以下的划为底层。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                定量研究数据发现，芥县初中生毕业后的流向与家庭所处阶层具有明显的相关性：上层子女就读市重点高中、县重点高中的比例高达66.7%和20.8%，而底层子女则没有人能入读市重点高中，仅有4%的比例入读县重点高中。底层子女入读本县职业高中的比例高达66%，终止学业的也高达22%。与之相反，上层子女则无人入读本县职业高中，也无人终止学业。另外，笔者还发现：职业中学成了中下层和底层子女绝大多数初中后的主要出路，而普通高中是中层以上子女的主要出路。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                学生在学业与升学中的不平等主要是因为文化机制，教育主要体现的是一种文化资本传递，这种传递是通过日复一日的“实践”形成的习惯。随着有技能、受过良好教育的劳动力在经济上的地位日趋重要，学校制度中的不平等现象，在一代一代地再生产，原有的阶级结构也越来越重要了。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                父母的学历所代表的学校教育成果作为文化资本，不仅在家庭里积蓄着，由子女继承下来，而且子女和家庭的升迁性流动机会在很大程度上取决于能够为子女提供怎样的学校教育机会。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                原标题：关注·底层教育梦：先天不足 后天亏损？
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                <strong>难以企及的重点大学、劳动力市场分割与就业困难</strong>
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                在教育层层分流与筛选的过程中，对于绝大多数底层群体而言，重点大学是可望而不可及的遥远梦想：一方面，这需要家庭持续性的长期教育投资和丰富的文化资本传递，而这两项正好是底层群体相对最为稀缺的资源。他们没有足够的经济资本可以容许子女长达数年的教育周期性积累，在子女成长最为关键的时期内，他们也没有科学的教育方式和充足的文化资本予以理性培育与有效传递，他们甚至自身也并不真正重视教育，生存理性的强大思维惯性使他们急于期待子女尽早进入到劳动力市场中去谋取即时的报酬，哪怕所获的微薄报酬甚至根本难以满足基本的日常生存所需。他们没有足够的资本去进行人力资源投资，更无法容忍这种投资所需要承担的高风险：毕业后即失业；
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                另一方面，录取制度和知识考核对底层群体也极不公平。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                以英语为例，在笔者所调研的芥县云乡九年一贯制学校中，最近几年，少年们才在小学三年级开始零星接受一点英语学习，而就在几年前，因为英语老师紧缺，少年们都是要到初一才开始系统学习英语，且任教的英语老师甚至都不是英语专业出身，而是由教语文的老师兼职授课。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                双语幼儿园和各种幼儿、少年英语培训班，在芥县县城和大城市里随处可见。就连芥县经济稍微发达一点的乡镇，家庭经济条件中等以上的孩子也都从幼儿园就开始学习英语。且不论这些幼儿园英语教学专业性水平有多高，但与身处真正底层社区中的云乡少年们相比，乡镇少年的英语学习至少早了4～5年。所以，每次在全县的统一测试中，云乡八年级和九年级的少年们，仅英语一科的平均分就比全县平均分低至少30分以上，更不要说其他学科了。在最后城乡统一的升学考试残酷竞争中，他们根本无力取得一丁点儿的优势。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                这种“先天不足”与“后天更弱”的教育现实，使绝大多数底层群体早在中考前就已经和重点大学无缘了，能够考上一般普通高中的都是凤毛麟角，更不要说升入重点高中。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                底层群体在教育筛选轨道中面对比其他社会阶层更多更大的困难，但他们并没有得到制度性和社会性的弥补，反而却受到更大的歧视和挑战：
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                其一，国家教材和升学知识考核的亲城逆乡性，底层群体要去学习他们根本没有生活背景和经验体悟的精密化知识符码，这与他们日常生活毫无关系。所以他们学习会比其他阶层面临更多的困难。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                其二，各种决定命运的升学考试都要到陌生的城镇中去参考，这给本身就缺乏竞争优势的底层子弟带来更大的心理挑战。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                其三，他们中的佼佼者即便幸运地进入了重点大学，但因为底层家庭社会资本的薄弱，在主要劳动力市场日益固化和排他化了的当代社会，他们又不得不流入低收入和低机会的次要劳动力市场，同时还要面对城乡、区域和行业等多重非均衡市场分割现实以及城镇新移民现实生存危机的多重挑战，这些都是“教育改变命运”事实上的无效性或低效性所必然带来的高风险底层命运。
+                            </p>
+                            <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;background-color:#FFFFFF;">
+                                （文中人名、县及县以下地名均为化名。感谢东北师范大学农村教育研究所和中国农村教育发展协同创新中心提供的帮助，感谢田野工作中提供过各种帮助的人士，感谢东北师范大学教授邬志辉与作者的多次讨论）（中国青年报 为中国社会科学院社会学研究所博士后）
+                            </p><div>
+                                <tt class="c-999 f-fM">
+                                    评论：<span class="totalResultComment">0</span>
+                                </tt> <tt class="c-999 f-fM ml20">
+                                点赞：<span class="addPraise26_3 praiseCount">0</span>
+                            </tt> <tt class="c-999 f-fM ml20">
+                                阅读：<span class="clickNum">1</span>
+                            </tt>
+                            </div>
+                        </div>
+                        <section class="mt20 tac" id="sharebutton">
+                            <div class="bdsharebuttonbox clearfix disIb bdshare-button-style0-32" data-bd-bind="1591172077725">
+                                <div class="pr disIb fl of">
+                                    <a href="javascript:void(0)" onclick="addActiclePraise('26',3)" title="" class="zan-icon dz-btn pr"></a>
+                                    <div class="dz-num">
+                                        <span class="c-red fsize16">+1</span>
+                                    </div>
+                                </div>
+                                <a title="分享到微信" href="#" class="bds_weixin fl" data-cmd="weixin">
+                                    <em class="share-fir-icon icon30"></em>
+                                </a>
+                                <a title="分享到新浪微博" href="#" class="bds_tsina fl" data-cmd="tsina"></a>
+                            </div>
+                            <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+                        </section>
+                    </article>
+                    <!-- 文章评论 开始 -->
+                    <div class="mt30 pr20 mb50 commentHtml"><div>
+                        <h6 class="c-c-content c-infor-title" id="i-art-comment">
+                            <span class="commentTitle">文章评论（1条）</span>
+                        </h6>
+                        <section class="lh-bj-list pr mt20 replyhtml">
+                            <ul>
+                                <li class="unBr">
+                                    <aside class="noter-pic">
+                                        <img width="50" height="50" class="picImg" src="../../../static/inxweb/img/avatar-boy.gif">
+                                    </aside>
+                                    <div class="of">
+                                        <section class="n-reply-wrap">
+                                            <fieldset>
+                                                <textarea name="" placeholder="输入您要评论的文字" id="commentContent"></textarea>
+                                            </fieldset>
+                                            <p class="of mt5 tar pl10 pr10">
+                                                <span class="fl "><tt class="c-red commentContentmeg" style="display: none;"></tt></span>
+                                                <a href="javascript:addComment();" title="回复" class="lh-reply-btn">回复</a>
+                                            </p>
+                                        </section>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- /无数据提示 开始-->
+                        <section class="no-data-wrap">
+                            <em class="icon30 no-data-ico">&nbsp;</em> <span class="c-666 fsize14 ml10 vam">还没有评论，快来抢沙发吧...</span>
+                        </section>
+                        <!-- /无数据提示 结束-->
+                        <!-- 公共分页 开始 -->
+
+                        <!-- 公共分页 结束 -->
+                    </div>
+                    </div>
+                </section>
+            </div>
+            <aside class="fl col-3 articleRecommend"><div>
+                <header class="comm-title all-article-title">
+                    <h2 class="fl tac">
+                        <span class="c-333">文章排行榜</span>
+                    </h2>
+                    <section class="c-tab-title">
+                        <a href="javascript: void(0)">&nbsp;</a>
+                    </section>
+                </header>
+                <section class="i-article-list r-art-wrap">
+                    <ul>
+                        <li class="lt2">
+                            <aside class="orderNum"><span>1</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/23.html" title="雅思阅读能力提高有方法 文章精读可以这样做" class="i-art-title">雅思阅读能力提高有方法 文章精读可以这样做</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/23.html">
+                                    <em class="icon18">&nbsp;</em>(1)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('23',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise23_3 praiseCount">1</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2016-02-26 10:31</tt></span>
+                            </section>
+                        </li>
+                        <li class="lt2">
+                            <aside class="orderNum"><span>2</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/17.html" title="中国军舰协助英、德等10国从也门撤侨225人" class="i-art-title">中国军舰协助英、德等10国从也门撤侨225人</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/17.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('17',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise17_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-09 10:08</tt></span>
+                            </section>
+                        </li>
+                        <li class="lt2">
+                            <aside class="orderNum"><span>3</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/20.html" title="MBA过来人亲述：联考英语复习经验" class="i-art-title">MBA过来人亲述：联考英语复习经验</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/20.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('20',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise20_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-10 00:00</tt></span>
+                            </section>
+                        </li>
+                        <li>
+                            <aside class="orderNum"><span>4</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/7.html" title="中国首款学习习近平重要讲话APP上线" class="i-art-title">中国首款学习习近平重要讲话APP上线</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/7.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('7',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise7_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-09 10:08</tt></span>
+                            </section>
+                        </li>
+                        <li>
+                            <aside class="orderNum"><span>5</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/14.html" title="背水一战的任天堂" class="i-art-title">背水一战的任天堂</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/14.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('14',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise14_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-09 10:08</tt></span>
+                            </section>
+                        </li>
+                        <li>
+                            <aside class="orderNum"><span>6</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/9.html" title="嘲讽陈年是很容易的事，但我更愿意祝他成功" class="i-art-title">嘲讽陈年是很容易的事，但我更愿意祝他成功</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/9.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('9',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise9_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-09 10:08</tt></span>
+                            </section>
+                        </li>
+                        <li>
+                            <aside class="orderNum"><span>7</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/15.html" title="渠道之殇：三星手机中国没落背后" class="i-art-title">渠道之殇：三星手机中国没落背后</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/15.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('15',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise15_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-09 10:08</tt></span>
+                            </section>
+                        </li>
+                        <li>
+                            <aside class="orderNum"><span>8</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/11.html" title="陈年重回T恤大战：凡客归来" class="i-art-title">陈年重回T恤大战：凡客归来</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/11.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('11',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise11_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-09 10:08</tt></span>
+                            </section>
+                        </li>
+                    </ul>
+                </section>
+                <section style="margin-bottom: 20px;">
+                    <a href="/" title="文章列表"><img src="../../../images/upload/image/20150908/1442225242188.jpg" width="100%" alt="文章列表"></a>
+                </section>
+            </div>
+            </aside>
+            <div class="clear"></div>
+        </section>
+    </section>
+    <!-- /文章列表 结束 -->
+</div>
+
+
+<!-- 公共底引入 -->
+<footer id="footer">
+    <section class="container">
+        <div class="">
+            <h4 class="hLh30">
+                <span class="fsize18 f-fM c-999">友情链接</span>
+            </h4>
+            <ul class="of flink-list">
+                <li><a href="http://www.ysusoft.com" title="燕软集团" target="_blank">燕软集团</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="b-foot">
+            <section class="fl col-7">
+                <section class="mr20">
+                    <section class="b-f-link">
+                        <a href="/front/helpCenter?id=193" title="关于我们" target="_blank">关于我们</a>|
+                        <a href="/front/helpCenter?id=194" title="联系我们" target="_blank">联系我们</a>|
+                        <a href="#" title="成功案例" target="_blank">成功案例</a>|
+                        <a href="/front/helpCenter" title="帮助中心" target="_blank">帮助中心</a>|
+                        <span>服务热线：XXXXXXX</span> <span>XXXXXXX</span>
+                    </section>
+                    <section class="b-f-link mt10">
+                        <span>燕软教育职业培训学校</span>
+                    </section>
+                </section>
+            </section>
+            <aside class="fl col-3 tac mt15">
+                <section class="gf-tx">
+                    <span><img src="../../../static/inxweb/img/wx-icon.png" alt=""></span>
+                    <div class="gf-tx-ewm">
+                        <img src="../../../images/upload/image/20150908/1441801228269.png" alt="">
+                    </div>
+                </section>
+            </aside>
+            <div class="clear"></div>
+        </div>
+    </section>
+</footer>
+<div class="r-fixed-wrap">
+    <ul class="r-fixed-ul">
+        <li id="goTopBtn" class="undis">
+            <a href="javascript: void(0)" title="返回顶部" class="bg-orange">
+                <em class="r-f-icon-3">&nbsp;</em><span>返回顶部</span>
+            </a>
+        </li>
+        <li class="foot-zixun">
+            <a href="" title="在线咨询" class="bg-orange">
+                <em class="r-f-icon-1">&nbsp;</em><span>在线咨询</span>
+            </a>
+        </li>
+        <li class="foot-zixun">
+            <a href="" title="扫描关注" class="bg-orange">
+                <em class="r-f-icon-2">&nbsp;</em><span>扫描关注</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- 公共底引入 -->
+<!-- 统计代码 -->
+</body>
+</html>

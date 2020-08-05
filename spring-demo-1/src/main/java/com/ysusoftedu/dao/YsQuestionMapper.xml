@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ysusoftedu.dao.YsQuestionMapper" >
+  <resultMap id="BaseResultMap" type="com.ysusoftedu.pojo.YsQuestion" >
+    <id column="question_id" property="questionId" jdbcType="INTEGER" />
+    <result column="dbid" property="dbid" jdbcType="INTEGER" />
+    <result column="qtype" property="qtype" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="adminid" property="adminid" jdbcType="INTEGER" />
+    <result column="states" property="states" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.ysusoftedu.pojo.YsQuestionWithBLOBs" extends="BaseResultMap" >
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+    <result column="skey" property="skey" jdbcType="LONGVARCHAR" />
+    <result column="keydesc" property="keydesc" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    question_id, dbid, qtype, status, adminid, states
+  </sql>
+  <sql id="Blob_Column_List" >
+    content, skey, keydesc
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.ysusoftedu.pojo.YsQuestionExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from ys_question
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ysusoftedu.pojo.YsQuestionExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ys_question
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from ys_question
+    where question_id = #{questionId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ys_question
+    where question_id = #{questionId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ysusoftedu.pojo.YsQuestionExample" >
+    delete from ys_question
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ysusoftedu.pojo.YsQuestionWithBLOBs" >
+    insert into ys_question (question_id, dbid, qtype, 
+      status, adminid, states, 
+      content, skey, keydesc
+      )
+    values (#{questionId,jdbcType=INTEGER}, #{dbid,jdbcType=INTEGER}, #{qtype,jdbcType=INTEGER}, 
+      #{status,jdbcType=VARCHAR}, #{adminid,jdbcType=INTEGER}, #{states,jdbcType=INTEGER}, 
+      #{content,jdbcType=LONGVARCHAR}, #{skey,jdbcType=LONGVARCHAR}, #{keydesc,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ysusoftedu.pojo.YsQuestionWithBLOBs" >
+    insert into ys_question
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="questionId != null" >
+        question_id,
+      </if>
+      <if test="dbid != null" >
+        dbid,
+      </if>
+      <if test="qtype != null" >
+        qtype,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="adminid != null" >
+        adminid,
+      </if>
+      <if test="states != null" >
+        states,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+      <if test="skey != null" >
+        skey,
+      </if>
+      <if test="keydesc != null" >
+        keydesc,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="questionId != null" >
+        #{questionId,jdbcType=INTEGER},
+      </if>
+      <if test="dbid != null" >
+        #{dbid,jdbcType=INTEGER},
+      </if>
+      <if test="qtype != null" >
+        #{qtype,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="adminid != null" >
+        #{adminid,jdbcType=INTEGER},
+      </if>
+      <if test="states != null" >
+        #{states,jdbcType=INTEGER},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="skey != null" >
+        #{skey,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="keydesc != null" >
+        #{keydesc,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ysusoftedu.pojo.YsQuestionExample" resultType="java.lang.Integer" >
+    select count(*) from ys_question
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update ys_question
+    <set >
+      <if test="record.questionId != null" >
+        question_id = #{record.questionId,jdbcType=INTEGER},
+      </if>
+      <if test="record.dbid != null" >
+        dbid = #{record.dbid,jdbcType=INTEGER},
+      </if>
+      <if test="record.qtype != null" >
+        qtype = #{record.qtype,jdbcType=INTEGER},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.adminid != null" >
+        adminid = #{record.adminid,jdbcType=INTEGER},
+      </if>
+      <if test="record.states != null" >
+        states = #{record.states,jdbcType=INTEGER},
+      </if>
+      <if test="record.content != null" >
+        content = #{record.content,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.skey != null" >
+        skey = #{record.skey,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.keydesc != null" >
+        keydesc = #{record.keydesc,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update ys_question
+    set question_id = #{record.questionId,jdbcType=INTEGER},
+      dbid = #{record.dbid,jdbcType=INTEGER},
+      qtype = #{record.qtype,jdbcType=INTEGER},
+      status = #{record.status,jdbcType=VARCHAR},
+      adminid = #{record.adminid,jdbcType=INTEGER},
+      states = #{record.states,jdbcType=INTEGER},
+      content = #{record.content,jdbcType=LONGVARCHAR},
+      skey = #{record.skey,jdbcType=LONGVARCHAR},
+      keydesc = #{record.keydesc,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update ys_question
+    set question_id = #{record.questionId,jdbcType=INTEGER},
+      dbid = #{record.dbid,jdbcType=INTEGER},
+      qtype = #{record.qtype,jdbcType=INTEGER},
+      status = #{record.status,jdbcType=VARCHAR},
+      adminid = #{record.adminid,jdbcType=INTEGER},
+      states = #{record.states,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ysusoftedu.pojo.YsQuestionWithBLOBs" >
+    update ys_question
+    <set >
+      <if test="dbid != null" >
+        dbid = #{dbid,jdbcType=INTEGER},
+      </if>
+      <if test="qtype != null" >
+        qtype = #{qtype,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="adminid != null" >
+        adminid = #{adminid,jdbcType=INTEGER},
+      </if>
+      <if test="states != null" >
+        states = #{states,jdbcType=INTEGER},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="skey != null" >
+        skey = #{skey,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="keydesc != null" >
+        keydesc = #{keydesc,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where question_id = #{questionId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.ysusoftedu.pojo.YsQuestionWithBLOBs" >
+    update ys_question
+    set dbid = #{dbid,jdbcType=INTEGER},
+      qtype = #{qtype,jdbcType=INTEGER},
+      status = #{status,jdbcType=VARCHAR},
+      adminid = #{adminid,jdbcType=INTEGER},
+      states = #{states,jdbcType=INTEGER},
+      content = #{content,jdbcType=LONGVARCHAR},
+      skey = #{skey,jdbcType=LONGVARCHAR},
+      keydesc = #{keydesc,jdbcType=LONGVARCHAR}
+    where question_id = #{questionId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ysusoftedu.pojo.YsQuestion" >
+    update ys_question
+    set dbid = #{dbid,jdbcType=INTEGER},
+      qtype = #{qtype,jdbcType=INTEGER},
+      status = #{status,jdbcType=VARCHAR},
+      adminid = #{adminid,jdbcType=INTEGER},
+      states = #{states,jdbcType=INTEGER}
+    where question_id = #{questionId,jdbcType=INTEGER}
+  </update>
+  
+  <select id="selectQId" resultType="int">
+  	select question_id from ys_question where dbid=#{dbid} and qtype=#{type}
+  </select>
+  
+</mapper>

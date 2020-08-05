@@ -1,0 +1,271 @@
+
+<!DOCTYPE HTML>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <title>课程列表-燕软在线教育</title>
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../../../static/inxweb/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/inxweb/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/inxweb/css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/inxweb/css/web.css">
+    <link href="../../../static/inxweb/css/mw_320_768.css" rel="stylesheet" type="text/css" media="screen and (min-width: 320px) and (max-width: 768px)">
+    <!--[if lt IE 9]>
+    <script src="../../../static/common/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="../../../static/common/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="../../../static/common/webutils.js"></script>
+    <script type="text/javascript" src="../../../static/inxweb/header/header.js"></script>
+    <script type="text/javascript" src="../../../static/inxweb/js/common.js"></script>
+
+</head>
+<body class="W-body">
+
+<!-- /global header begin-->
+<header id="header">
+    <section class="container">
+        <h1 id="logo">
+            <a href="../../../" title="燕软在线教育软件">
+                <img src="../../../static/admin/assets/logo.png" width="100%" alt="燕软在线教育软件">
+            </a>
+        </h1>
+        <div class="h-r-nsl">
+            <ul class="nav">
+                <li><a href="../index.html" title="首页" >首页</a></li>
+                <li><a href="../course/courseIndex.html" title="课程" >课程</a></li>
+                <li><a href="../teacher/tercherIndex.html" title="名师" >名师</a></li>
+                <li><a href="../acticle/acticleIndex.html" title="文章" >文章</a></li>
+            </ul>
+            <!-- / nav -->
+            <ul class="h-r-login">
+
+                <li class="undis" id="no-login">
+                    <a href="javascript:lrFun(1)" title="登录">
+                        <em class="icon18 login-icon">&nbsp;</em><span class="vam ml5">登录</span>
+                    </a>
+                    |
+                    <a href="javascript:lrFun(2)" title="注册">
+                        </em><span class="vam ml5">注册</span>
+                    </a>
+                </li>
+
+                <li class="mr10 undis" id="is-login-one"><a href="succIndex.html" title="消息" id="headerMsgCountId">
+                    <em class="icon18 news-icon">&nbsp;</em>
+                </a><q class="red-point" style="display: none">&nbsp;</q></li>
+
+                <li class="h-r-user undis" id="is-login-two"><a href="../../uc/index" title="">
+                    <img src="../../../static/inxweb/img/avatar-boy.gif" width="30" height="30" class="vam picImg" alt="">
+                    <span class="vam disIb" id="userName"></span>
+                </a>
+                    <a href="javascript:void(0)" title="退出" onclick="exit();" class="ml5">退出</a></li>
+
+                <!-- /未登录显示第1 li；登录后显示第2，3 li -->
+            </ul>
+            <aside class="h-r-search">
+                <form action="../../front/showcoulist" method="post">
+                    <label class="h-r-s-box"><input type="text" placeholder="输入你想学的课程" name="queryCourse.courseName" value="">
+                        <button type="submit" class="s-btn">
+                            <em class="icon18">&nbsp;</em>
+                        </button></label>
+                </form>
+            </aside>
+        </div>
+        <aside class="mw-nav-btn">
+            <div class="mw-nav-icon"></div>
+        </aside>
+        <div class="clear"></div>
+    </section>
+</header>
+
+<div id="aCoursesList" class="bg-fa of">
+    <!-- /课程列表 开始 -->
+    <section class="container">
+        <header class="comm-title">
+            <h2 class="fl tac">
+                <span class="c-333">讲师介绍</span>
+            </h2>
+        </header>
+        <div class="t-infor-wrap">
+            <div class="fl t-infor-menu">
+                <section id="t-infor-menu" class="c-tab-title">
+                    <p>
+                        <a class="current" name="c-desc" title="讲师详情" href="javascript: void(0)">讲师详情</a>
+                    </p>
+                    <p>
+                        <a title="主讲课程" name="c-course" href="javascript: void(0)">主讲课程</a>
+                    </p>
+                </section>
+            </div>
+            <section class="fl t-infor-box c-desc-content">
+                <div class="mt20 ml20">
+                    <section class="t-infor-pic">
+                        <img src="../../../images/upload/teacher/20150915/1442297885942.jpg" xsrc="../../../images/upload/teacher/20150915/1442297885942.jpg" alt="">
+                    </section>
+                    <h3 class="hLh30">
+                        <span class="fsize24 c-333">陈晓薇&nbsp;高级讲师</span>
+                    </h3>
+                    <section class="mt10">
+                        <span class="t-tag-bg">北京师范大学法学院副教授</span>
+                    </section>
+                    <section class="t-infor-txt">
+                        <p class="mt20">北京师范大学法学院副教授、清华大学法学博士。自2004年至今已有9年的司法考试培训经验。长期从事司法考试辅导，深知命题规律，了解解题技巧。内容把握准确，授课重点明确，层次分明，调理清晰，将法条法理与案例有机融合，强调综合，深入浅出。</p>
+                    </section>
+                    <div class="clear"></div>
+                </div>
+            </section>
+            <div class="clear"></div>
+        </div>
+        <section class="mt30">
+            <div>
+                <header class="comm-title all-teacher-title c-course-content">
+                    <h2 class="fl tac">
+                        <span class="c-333">主讲课程</span>
+                    </h2>
+                    <section class="c-tab-title">
+                        <a href="javascript: void(0)">&nbsp;</a>
+                    </section>
+                </header>
+                <!-- /无数据提示 开始-->
+                <!-- /无数据提示 结束-->
+                <article class="comm-course-list">
+                    <ul class="of">
+                        <li>
+                            <div class="cc-l-wrap">
+                                <section class="course-img">
+                                    <img xsrc="../../../images/upload/course/20150915/1442295604295.jpg" src="../../../images/upload/course/20150915/1442295604295.jpg" class="img-responsive" alt="">
+                                    <div class="cc-mask">
+                                        <a href="../../../front/couinfo/20" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
+                                    </div>
+                                </section>
+                                <h3 class="hLh30 txtOf mt10">
+                                    <a href="../../../front/couinfo/20" title="C4D零基础" class="course-title fsize18 c-333">C4D零基础</a>
+                                </h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cc-l-wrap">
+                                <section class="course-img">
+                                    <img xsrc="/static/inxweb/img/default-img.gif" src="/static/inxweb/img/default-img.gif" class="img-responsive" alt="">
+                                    <div class="cc-mask">
+                                        <a href="../../../front/couinfo/27" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
+                                    </div>
+                                </section>
+                                <h3 class="hLh30 txtOf mt10">
+                                    <a href="../../../front/couinfo/27" title="JavaSe" class="course-title fsize18 c-333">JavaSe</a>
+                                </h3>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </article>
+            </div>
+            <!-- 公共分页 开始 -->
+            <div>
+                <form action="../../../front/teacher/83" method="post" id="searchForm">
+                    <input type="hidden" name="page.currentPage" id="pageCurrentPage" value="1">
+                </form>
+                <script type="text/javascript" src="../../../static/common/web/js/page.js"></script>
+                <div class="paging">
+                    <a href="javascript:goPage(1);" title="">首</a>
+                    <a id="backpage" class="undisable" href="javascript:void(0)" title="">&lt;</a>
+                    <a href="javascript:void(0)" title="" class="current undisable">1</a><a id="nextpage" href="javascript:void(0)" title="" class="undisable">&gt;</a>
+                    <a href="javascript:goPage(1);" title="">末</a>
+                    <div class="clear"></div>
+                </div>
+
+
+                <script type="text/javascript">
+                    var totalPageSize =1;
+                    var currentPage =
+                            0<1 ? 1 :1;
+                    var totalPage = 1;
+                    showPageNumber();
+                </script></div>
+            <!-- 公共分页 结束 -->
+        </section>
+    </section>
+    <!-- /课程列表 结束 -->
+</div>
+<script>
+    $(function() {
+        cTabFun($("#t-infor-menu>p>a")); // 滚动定位
+        scrollLoad(); //响应滚动加载课程图片
+    })
+</script>
+
+
+
+<!-- 公共底引入 -->
+<footer id="footer">
+    <section class="container">
+        <div class="">
+            <h4 class="hLh30">
+                <span class="fsize18 f-fM c-999">友情链接</span>
+            </h4>
+            <ul class="of flink-list">
+                <li><a href="http://www.ysusoft.com" title="燕软集团" target="_blank">燕软集团</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="b-foot">
+            <section class="fl col-7">
+                <section class="mr20">
+                    <section class="b-f-link">
+                        <a href="/front/helpCenter?id=193" title="关于我们" target="_blank">关于我们</a>|
+                        <a href="/front/helpCenter?id=194" title="联系我们" target="_blank">联系我们</a>|
+                        <a href="#" title="成功案例" target="_blank">成功案例</a>|
+                        <a href="/front/helpCenter" title="帮助中心" target="_blank">帮助中心</a>|
+                        <span>服务热线：XXXXXXX</span> <span>XXXXXXX</span>
+                    </section>
+                    <section class="b-f-link mt10">
+                        <span>燕软教育职业培训学校</span>
+                    </section>
+                </section>
+            </section>
+            <aside class="fl col-3 tac mt15">
+                <section class="gf-tx">
+                    <span><img src="../../../static/inxweb/img/wx-icon.png" alt=""></span>
+                    <div class="gf-tx-ewm">
+                        <img src="../../../images/upload/image/20150908/1441801228269.png" alt="">
+                    </div>
+                </section>
+            </aside>
+            <div class="clear"></div>
+        </div>
+    </section>
+</footer>
+<div class="r-fixed-wrap">
+    <ul class="r-fixed-ul">
+        <li id="goTopBtn" class="undis">
+            <a href="javascript: void(0)" title="返回顶部" class="bg-orange">
+                <em class="r-f-icon-3">&nbsp;</em><span>返回顶部</span>
+            </a>
+        </li>
+        <li class="foot-zixun">
+            <a href="" title="在线咨询" class="bg-orange">
+                <em class="r-f-icon-1">&nbsp;</em><span>在线咨询</span>
+            </a>
+        </li>
+        <li class="foot-zixun">
+            <a href="" title="扫描关注" class="bg-orange">
+                <em class="r-f-icon-2">&nbsp;</em><span>扫描关注</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- 公共底引入 -->
+<!-- 统计代码 -->
+</body>
+</html>

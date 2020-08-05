@@ -1,0 +1,127 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9, IE=8">
+    <title>功能权限管理</title>
+    <link type="text/css" href="../../../static/admin/css/layout.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="../../../static/common/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../../../static/common/admin/js/admin-inxedu.js"></script>
+    <script type="text/javascript" src="../../../static/common/webutils.js"></script>
+
+
+
+    <link type="text/css" rel="stylesheet" href="../../../static/common/ztree/css/zTreeStyle.css" />
+    <script type="text/javascript" src="../../../static/common/ztree/jquery.ztree.core-3.5.min.js"></script>
+    <script type="text/javascript" src="../../../static/common/ztree/jquery.ztree.excheck-3.5.min.js"></script>
+    <script type="text/javascript" src="../../../static/common/ztree/jquery.ztree.exedit-3.5.min.js"></script>
+    <script type="text/javascript" src="../../../static/admin/system/sys-function.js"></script>
+
+    <script type="text/javascript">
+        var ztree='[{"functionId":45,"parentId":0,"functionName":"系统管理","functionUrl":"","functionType":1,"createTime":"2015-03-23 19:47:53","sort":10},{"functionId":24,"parentId":0,"functionName":"用户管理","functionUrl":"","functionType":1,"createTime":"2015-03-17 21:50:30","sort":9},{"functionId":36,"parentId":0,"functionName":"课程管理","functionUrl":"","functionType":1,"createTime":"2015-03-23 17:58:20","sort":8},{"functionId":46,"parentId":0,"functionName":"文章资讯管理","functionUrl":"","functionType":1,"createTime":"2015-03-23 19:58:35","sort":7},{"functionId":61,"parentId":0,"functionName":"学员管理","functionUrl":"","functionType":1,"createTime":"2015-03-26 01:31:10","sort":5},{"functionId":18,"parentId":45,"functionName":"权限树","functionUrl":"/admin/sysfunctioin/showfunctionztree","functionType":1,"createTime":"2015-03-17 21:46:16","sort":0},{"functionId":19,"parentId":45,"functionName":"角色管理","functionUrl":"/admin/sysrole/showroleList","functionType":1,"createTime":"2015-03-17 21:46:17","sort":0},{"functionId":20,"parentId":18,"functionName":"修改权限","functionUrl":"/admin/sysfunctioin/updatefunction","functionType":2,"createTime":"2015-03-17 21:47:21","sort":0},{"functionId":21,"parentId":18,"functionName":"添加权限","functionUrl":"/admin/sysfunctioin/addfunction","functionType":2,"createTime":"2015-03-17 21:47:23","sort":0},{"functionId":22,"parentId":18,"functionName":"拖拽权限","functionUrl":"/admin/sysfunctioin/updateparentid","functionType":2,"createTime":"2015-03-17 21:48:44","sort":0},{"functionId":23,"parentId":18,"functionName":"删除权限","functionUrl":"/admin/sysfunctioin/deletefunction","functionType":2,"createTime":"2015-03-17 21:50:30","sort":0},{"functionId":25,"parentId":24,"functionName":"用户列表","functionUrl":"/admin/sysuser/userlist","functionType":1,"createTime":"2015-03-17 21:50:30","sort":0},{"functionId":26,"parentId":19,"functionName":"保存角色权限","functionUrl":"/admin/sysrole/saveroelfunction/","functionType":2,"createTime":"2015-03-19 18:56:09","sort":0},{"functionId":30,"parentId":0,"functionName":"媒体广告图片","functionUrl":"","functionType":1,"createTime":"2015-03-23 01:40:44","sort":0},{"functionId":31,"parentId":24,"functionName":"添加用户","functionUrl":"/admin/sysuser/createuser","functionType":2,"createTime":"2015-03-23 01:46:17","sort":0},{"functionId":32,"parentId":30,"functionName":"广告图","functionUrl":"/admin/website/imagesPage","functionType":1,"createTime":"2015-03-23 01:41:47","sort":0},{"functionId":33,"parentId":24,"functionName":"修改用户密码","functionUrl":"/admin/sysuser/updatepwd/","functionType":2,"createTime":"2015-03-23 01:48:55","sort":0},{"functionId":34,"parentId":24,"functionName":"修改用户","functionUrl":"/admin/sysuser/updateuser","functionType":2,"createTime":"2015-03-23 01:48:55","sort":0},{"functionId":35,"parentId":24,"functionName":"禁用或启用用户","functionUrl":"/admin/sysuser/disableOrstart/","functionType":2,"createTime":"2015-03-23 01:50:14","sort":0},{"functionId":37,"parentId":36,"functionName":"专业管理","functionUrl":"/admin/subj/toSubjectList","functionType":1,"createTime":"2015-03-23 17:58:34","sort":0},{"functionId":38,"parentId":36,"functionName":"课程管理","functionUrl":"/admin/cou/list","functionType":1,"createTime":"2015-03-23 18:01:46","sort":0},{"functionId":39,"parentId":36,"functionName":"推荐课程","functionUrl":"/admin/detail/list","functionType":1,"createTime":"2015-03-23 18:03:00","sort":0},{"functionId":40,"parentId":36,"functionName":"推荐课程分类","functionUrl":"/admin/website/websiteCoursePage","functionType":1,"createTime":"2015-03-23 18:03:34","sort":0},{"functionId":42,"parentId":0,"functionName":"教师管理","functionUrl":"","functionType":1,"createTime":"2015-03-23 18:04:17","sort":0},{"functionId":43,"parentId":42,"functionName":"教师列表","functionUrl":"/admin/teacher/list","functionType":1,"createTime":"2015-03-23 18:04:37","sort":0},{"functionId":44,"parentId":42,"functionName":"添加讲师","functionUrl":"/admin/teacher/toadd","functionType":1,"createTime":"2015-03-23 18:05:18","sort":0},{"functionId":47,"parentId":46,"functionName":"添加文章","functionUrl":"/admin/article/initcreate","functionType":1,"createTime":"2015-03-23 19:58:49","sort":0},{"functionId":49,"parentId":82,"functionName":"基本配置","functionUrl":"/admin/websiteProfile/find/web","functionType":1,"createTime":"2015-03-24 00:08:44","sort":0},{"functionId":50,"parentId":46,"functionName":"文章列表","functionUrl":"/admin/article/showlist","functionType":1,"createTime":"2015-03-24 00:30:48","sort":0},{"functionId":51,"parentId":82,"functionName":"导航管理","functionUrl":"/admin/website/navigates","functionType":1,"createTime":"2015-03-24 00:36:45","sort":0},{"functionId":55,"parentId":50,"functionName":"删除资讯","functionUrl":"/admin/article/publishOrDelete/2","functionType":2,"createTime":"2015-03-24 23:41:06","sort":0},{"functionId":56,"parentId":50,"functionName":"发布文章","functionUrl":"/admin/article/publishOrDelete/1","functionType":2,"createTime":"2015-03-24 23:41:09","sort":0},{"functionId":57,"parentId":50,"functionName":"修改并发布文章","functionUrl":"/admin/article/updatearticle/2","functionType":2,"createTime":"2015-03-24 23:41:10","sort":0},{"functionId":58,"parentId":50,"functionName":"修改文章","functionUrl":"/admin/article/updatearticle/1","functionType":2,"createTime":"2015-03-24 23:44:02","sort":0},{"functionId":59,"parentId":47,"functionName":"保存文章","functionUrl":"/admin/article/addarticle/1","functionType":2,"createTime":"2015-03-24 23:44:42","sort":0},{"functionId":60,"parentId":47,"functionName":"保存并发布文章","functionUrl":"/admin/article/addarticle/2","functionType":2,"createTime":"2015-03-24 23:44:44","sort":0},{"functionId":62,"parentId":61,"functionName":"学员列表","functionUrl":"/admin/user/getuserList","functionType":1,"createTime":"2015-03-26 01:31:28","sort":0},{"functionId":68,"parentId":82,"functionName":"在线咨询","functionUrl":"/admin/websiteProfile/online","functionType":1,"createTime":"2015-03-27 21:33:56","sort":0},{"functionId":69,"parentId":37,"functionName":"创建专业","functionUrl":"/admin/subj/createSubject","functionType":2,"createTime":"2015-03-29 19:47:32","sort":0},{"functionId":70,"parentId":37,"functionName":"修改专业父ID","functionUrl":"/admin/subj/updateparentid/","functionType":2,"createTime":"2015-03-29 19:47:32","sort":0},{"functionId":71,"parentId":37,"functionName":"修改专业名","functionUrl":"/admin/subj/updatesubjectName","functionType":2,"createTime":"2015-03-29 19:47:34","sort":0},{"functionId":72,"parentId":37,"functionName":"删除专业","functionUrl":"/admin/subj/deleteSubject/","functionType":2,"createTime":"2015-03-29 19:49:09","sort":0},{"functionId":73,"parentId":38,"functionName":"章节管理","functionUrl":"/admin/kpoint/list/","functionType":2,"createTime":"2015-03-31 18:13:35","sort":0},{"functionId":74,"parentId":38,"functionName":"修改课程","functionUrl":"/admin/cou/updateCourse","functionType":2,"createTime":"2015-03-31 18:14:27","sort":0},{"functionId":75,"parentId":38,"functionName":"上架或下架课程","functionUrl":"/admin/cou/avaliable/","functionType":2,"createTime":"2015-03-31 18:15:04","sort":0},{"functionId":76,"parentId":73,"functionName":"创建视频","functionUrl":"/admin/kpoint/addkpoint","functionType":2,"createTime":"2015-03-31 18:16:14","sort":0},{"functionId":77,"parentId":73,"functionName":"修改视频节点","functionUrl":"/admin/kpoint/updateKpoint","functionType":2,"createTime":"2015-03-31 18:16:52","sort":0},{"functionId":78,"parentId":73,"functionName":"删除视频节点","functionUrl":"/admin/kpoint/deletekpoint/","functionType":2,"createTime":"2015-03-31 18:17:20","sort":0},{"functionId":79,"parentId":30,"functionName":"图片类型","functionUrl":"/admin/imagetype/getlist","functionType":1,"createTime":"2015-04-01 02:25:06","sort":0},{"functionId":80,"parentId":62,"functionName":"修改学员密码","functionUrl":"/admin/user/updateUserPwd","functionType":2,"createTime":"2015-04-02 02:00:46","sort":0},{"functionId":81,"parentId":62,"functionName":"禁用或启用学员","functionUrl":"/admin/user/updateuserstate","functionType":2,"createTime":"2015-04-02 02:00:47","sort":0},{"functionId":82,"parentId":0,"functionName":"网站信息","functionUrl":"","functionType":1,"createTime":"2015-04-09 21:39:37","sort":0},{"functionId":83,"parentId":43,"functionName":"修改讲师","functionUrl":"/admin/teacher/update","functionType":2,"createTime":"2015-05-15 02:33:19","sort":0},{"functionId":84,"parentId":43,"functionName":"删除讲师","functionUrl":"/admin/teacher/delete/","functionType":2,"createTime":"2015-05-15 02:34:07","sort":0},{"functionId":91,"parentId":0,"functionName":"问答","functionUrl":"","functionType":1,"createTime":"2015-08-26 14:31:07","sort":0},{"functionId":92,"parentId":91,"functionName":"问答标签","functionUrl":"/admin/questions/toQuestionsTagList","functionType":1,"createTime":"2015-08-26 14:31:23","sort":0},{"functionId":93,"parentId":91,"functionName":"问答列表","functionUrl":"/admin/questions/list","functionType":1,"createTime":"2015-08-26 18:46:39","sort":0},{"functionId":94,"parentId":91,"functionName":"问答回复列表","functionUrl":"/admin/questionscomment/list","functionType":1,"createTime":"2015-08-27 09:44:43","sort":0},{"functionId":95,"parentId":0,"functionName":"系统消息","functionUrl":"","functionType":1,"createTime":"2015-08-29 18:33:06","sort":0},{"functionId":96,"parentId":95,"functionName":"全站系统消息","functionUrl":"/admin/user/letter/toSendSystemMessages","functionType":1,"createTime":"2015-08-29 18:33:20","sort":0},{"functionId":97,"parentId":0,"functionName":"评论管理","functionUrl":"","functionType":1,"createTime":"2015-08-31 09:11:44","sort":0},{"functionId":98,"parentId":97,"functionName":"评论列表","functionUrl":"/admin/comment/query","functionType":1,"createTime":"2015-08-31 09:12:18","sort":0},{"functionId":99,"parentId":95,"functionName":"批量发送","functionUrl":"/admin/user/letter/toSendSystemMessagesBatch","functionType":1,"createTime":"2015-08-31 18:18:18","sort":0},{"functionId":100,"parentId":82,"functionName":"前台主题色","functionUrl":"/admin/theme/toupdate","functionType":1,"createTime":"2015-09-22 14:25:32","sort":0},{"functionId":107,"parentId":61,"functionName":"批量开通学员","functionUrl":"/admin/user/toBatchOpen","functionType":1,"createTime":"2015-12-01 18:18:44","sort":0},{"functionId":108,"parentId":0,"functionName":"邮件管理","functionUrl":"","functionType":1,"createTime":"2016-01-14 16:35:19","sort":0},{"functionId":109,"parentId":108,"functionName":"发送邮件","functionUrl":"/admin/email/toEmailMsg","functionType":1,"createTime":"2016-01-14 16:35:43","sort":0},{"functionId":110,"parentId":108,"functionName":"邮件管理","functionUrl":"/admin/email/sendEmaillist","functionType":1,"createTime":"2016-01-14 16:39:24","sort":0},{"functionId":111,"parentId":0,"functionName":"帮助中心","functionUrl":"","functionType":1,"createTime":"2016-01-15 14:37:38","sort":0},{"functionId":112,"parentId":111,"functionName":"新建帮助页面","functionUrl":"/admin/helpMenu/doadd","functionType":1,"createTime":"2016-01-15 14:37:55","sort":0},{"functionId":113,"parentId":111,"functionName":"帮助菜单","functionUrl":"/admin/helpMenu/list","functionType":1,"createTime":"2016-01-15 14:38:58","sort":0},{"functionId":114,"parentId":0,"functionName":"短信管理","functionUrl":"","functionType":1,"createTime":"2016-01-16 14:35:16","sort":0},{"functionId":115,"parentId":114,"functionName":"发送短信","functionUrl":"/admin/mobile/toMsg","functionType":1,"createTime":"2016-01-16 14:36:39","sort":0},{"functionId":116,"parentId":114,"functionName":"短信管理","functionUrl":"/admin/mobile/sendMsglist","functionType":1,"createTime":"2016-01-16 14:38:52","sort":0},{"functionId":117,"parentId":0,"functionName":"缓存管理","functionUrl":"","functionType":1,"createTime":"2016-01-18 16:07:36","sort":0},{"functionId":118,"parentId":117,"functionName":"缓存管理","functionUrl":"/admin/ehcache/queryWebsiteEhcacheList","functionType":1,"createTime":"2016-01-18 16:08:33","sort":0},{"functionId":126,"parentId":0,"functionName":"统计","functionUrl":"","functionType":1,"createTime":"2016-02-26 09:56:38","sort":0},{"functionId":129,"parentId":126,"functionName":"学员登录数统计","functionUrl":"/admin/statisticsPage/login","functionType":1,"createTime":"2016-01-22 16:11:42","sort":0},{"functionId":130,"parentId":126,"functionName":"学员注册数统计","functionUrl":"/admin/statisticsPage/registered","functionType":1,"createTime":"2016-01-22 16:11:44","sort":0},{"functionId":133,"parentId":126,"functionName":"视频观看数统计","functionUrl":"/admin/statisticsPage/videoViewingNum","functionType":1,"createTime":"2016-01-22 16:13:26","sort":0},{"functionId":134,"parentId":126,"functionName":"生成统计","functionUrl":"/admin/jumpGenerationStatisticsPage","functionType":1,"createTime":"2016-01-22 16:13:27","sort":0},{"functionId":135,"parentId":126,"functionName":"每日学员数统计","functionUrl":"/admin/statisticsPage/dailyUserNumber","functionType":1,"createTime":"2016-01-25 11:42:09","sort":0},{"functionId":136,"parentId":126,"functionName":"每日课程数统计","functionUrl":"/admin/statisticsPage/dailyCourseNumber","functionType":1,"createTime":"2016-01-25 11:42:10","sort":0},{"functionId":137,"parentId":95,"functionName":"系统消息列表","functionUrl":"/admin/letter/systemmsglist","functionType":1,"createTime":"2016-02-27 17:44:00","sort":0}]';
+        $(function(){
+            showFunctionZtree(ztree);
+            $(".ui-dialog-titlebar-close,.closeBut,").click(function(){
+                closeData();
+            });
+        });
+    </script>
+</head>
+<body>
+<script>$(function(){var str = '<section style="color: #666;position:absolute;left:50%;bottom:20px;z-index:7;margin-left:-80px;">';str+='<span>Powered by</span>';str+='<a href="http://www.inxedu.com" target="_blank" title="因酷教育软件" style="margin-left: 2px;color: #666;">因酷教育软件</a>';str+='</section>';$("body").append(str); });</script>
+<div class="mt20">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" class="commonTab01">
+        <thead>
+        <tr>
+            <th colspan="2" align="left">
+                <span>权限设置</span>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td width="20%">
+                <div id="ztreedemo" class="ztree"></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="增加权限" onclick="addFunction();" class="btn btn-danger" />
+                <input type="button" value="删除选中权限" onclick="delFunctions();" class="btn btn-danger" />
+                <input type="button" onclick="checkNodeFalse();" value="清空" class="btn btn-danger" />
+                <font color="red">(*红字为功能权限，其他为菜单权限，拖拽可修改权限节点父级)</font>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- 修改权限信息窗口，开始 -->
+<div id="updateWin" aria-labelledby="ui-dialog-title-dialog" role="dialog" tabindex="-1"
+     class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable"
+     style="display: none; position: absolute; overflow: hidden; z-index: 1010; outline: 0px none; height: auto; width: 511px; top: 173px; left: 367px;">
+    <div style="-moz-user-select: none;" unselectable="on" class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+        <span style="-moz-user-select: none;" unselectable="on" id="ui-dialog-title-dialog" class="ui-dialog-title">修改权限</span>
+        <a style="-moz-user-select: none;" unselectable="on" role="button" class="ui-dialog-titlebar-close ui-corner-all"
+           href="javascript:void(0)">
+            <span style="-moz-user-select: none;" unselectable="on" class="ui-icon ui-icon-closethick">close</span>
+        </a>
+    </div>
+    <div style="height: 300px; min-height: 42px; width: auto;" class="ui-dialog-content ui-widget-content">
+        <form id="updateForm">
+            <input type="hidden" id="functionId" name="sysFunction.functionId" />
+            <table style="line-height: 35px;">
+                <tr>
+                    <td>权限名:</td>
+                    <td>
+                        <input id="functionName" name="sysFunction.functionName" type="text" />
+                        <samp></samp>
+                    </td>
+                </tr>
+                <tr>
+                    <td>权限URL:</td>
+                    <td>
+                        <input id="functionUrl" name="sysFunction.functionUrl" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>权限类型:</td>
+                    <td>
+                        <select id="functionType" name="sysFunction.functionType"><option value="1">菜单类型</option>
+                            <option value="2">功能类型</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>排序:</td>
+                    <td>
+                        <input id="sort" type="text" value="0" name="sysFunction.sort" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div style="-moz-user-select: none;" unselectable="on" class="ui-resizable-handle ui-resizable-n"></div>
+    <div style="-moz-user-select: none;" unselectable="on" class="ui-resizable-handle ui-resizable-e"></div>
+    <div style="-moz-user-select: none;" unselectable="on" class="ui-resizable-handle ui-resizable-s"></div>
+    <div style="-moz-user-select: none;" unselectable="on" class="ui-resizable-handle ui-resizable-w"></div>
+    <div unselectable="on" style="z-index: 1001; -moz-user-select: none;"
+         class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se"></div>
+    <div unselectable="on" style="z-index: 1002; -moz-user-select: none;" class="ui-resizable-handle ui-resizable-sw"></div>
+    <div unselectable="on" style="z-index: 1003; -moz-user-select: none;" class="ui-resizable-handle ui-resizable-ne"></div>
+    <div unselectable="on" style="z-index: 1004; -moz-user-select: none;" class="ui-resizable-handle ui-resizable-nw"></div>
+    <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+        <button class="ui-state-default ui-corner-all" onclick="updateFunction()" type="button">确定</button>
+        <button class="ui-state-default ui-corner-all closeBut" type="button">取消</button>
+    </div>
+</div>
+<!-- 修改权限信息窗口，结束 -->
+<script>
+    $(function(){
+        $("section").hide();
+    });
+</script>
+</body>
+</html>

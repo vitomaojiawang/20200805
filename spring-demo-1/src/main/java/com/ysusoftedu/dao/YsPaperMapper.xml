@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ysusoftedu.dao.YsPaperMapper" >
+  <resultMap id="BaseResultMap" type="com.ysusoftedu.pojo.YsPaper" >
+    <id column="paper_id" property="paperId" jdbcType="INTEGER" />
+    <result column="paper_name" property="paperName" jdbcType="VARCHAR" />
+    <result column="adminid" property="adminid" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="starttime" property="starttime" jdbcType="VARCHAR" />
+    <result column="endtime" property="endtime" jdbcType="VARCHAR" />
+    <result column="paper_minute" property="paperMinute" jdbcType="INTEGER" />
+    <result column="show_scoretime" property="showScoretime" jdbcType="VARCHAR" />
+    <result column="total_score" property="totalScore" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="qorder" property="qorder" jdbcType="VARCHAR" />
+    <result column="postdate" property="postdate" jdbcType="VARCHAR" />
+    <result column="paper_status" property="paperStatus" jdbcType="VARCHAR" />
+    <result column="paper_state" property="paperState" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    paper_id, paper_name, adminid, status, starttime, endtime, paper_minute, show_scoretime, 
+    total_score, remark, qorder, postdate, paper_status, paper_state
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ysusoftedu.pojo.YsPaperExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ys_paper
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from ys_paper
+    where paper_id = #{paperId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ys_paper
+    where paper_id = #{paperId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ysusoftedu.pojo.YsPaperExample" >
+    delete from ys_paper
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ysusoftedu.pojo.YsPaper" >
+    insert into ys_paper (paper_id, paper_name, adminid, 
+      status, starttime, endtime, 
+      paper_minute, show_scoretime, total_score, 
+      remark, qorder, postdate, 
+      paper_status, paper_state)
+    values (#{paperId,jdbcType=INTEGER}, #{paperName,jdbcType=VARCHAR}, #{adminid,jdbcType=INTEGER}, 
+      #{status,jdbcType=INTEGER}, #{starttime,jdbcType=VARCHAR}, #{endtime,jdbcType=VARCHAR}, 
+      #{paperMinute,jdbcType=INTEGER}, #{showScoretime,jdbcType=VARCHAR}, #{totalScore,jdbcType=INTEGER}, 
+      #{remark,jdbcType=VARCHAR}, #{qorder,jdbcType=VARCHAR}, #{postdate,jdbcType=VARCHAR}, 
+      #{paperStatus,jdbcType=VARCHAR}, #{paperState,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="paperId" parameterType="com.ysusoftedu.pojo.YsPaper" >
+    insert into ys_paper
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="paperId != null" >
+        paper_id,
+      </if>
+      <if test="paperName != null" >
+        paper_name,
+      </if>
+      <if test="adminid != null" >
+        adminid,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="starttime != null" >
+        starttime,
+      </if>
+      <if test="endtime != null" >
+        endtime,
+      </if>
+      <if test="paperMinute != null" >
+        paper_minute,
+      </if>
+      <if test="showScoretime != null" >
+        show_scoretime,
+      </if>
+      <if test="totalScore != null" >
+        total_score,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="qorder != null" >
+        qorder,
+      </if>
+      <if test="postdate != null" >
+        postdate,
+      </if>
+      <if test="paperStatus != null" >
+        paper_status,
+      </if>
+      <if test="paperState != null" >
+        paper_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="paperId != null" >
+        #{paperId,jdbcType=INTEGER},
+      </if>
+      <if test="paperName != null" >
+        #{paperName,jdbcType=VARCHAR},
+      </if>
+      <if test="adminid != null" >
+        #{adminid,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="starttime != null" >
+        #{starttime,jdbcType=VARCHAR},
+      </if>
+      <if test="endtime != null" >
+        #{endtime,jdbcType=VARCHAR},
+      </if>
+      <if test="paperMinute != null" >
+        #{paperMinute,jdbcType=INTEGER},
+      </if>
+      <if test="showScoretime != null" >
+        #{showScoretime,jdbcType=VARCHAR},
+      </if>
+      <if test="totalScore != null" >
+        #{totalScore,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="qorder != null" >
+        #{qorder,jdbcType=VARCHAR},
+      </if>
+      <if test="postdate != null" >
+        #{postdate,jdbcType=VARCHAR},
+      </if>
+      <if test="paperStatus != null" >
+        #{paperStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="paperState != null" >
+        #{paperState,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ysusoftedu.pojo.YsPaperExample" resultType="java.lang.Integer" >
+    select count(*) from ys_paper
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update ys_paper
+    <set >
+      <if test="record.paperId != null" >
+        paper_id = #{record.paperId,jdbcType=INTEGER},
+      </if>
+      <if test="record.paperName != null" >
+        paper_name = #{record.paperName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.adminid != null" >
+        adminid = #{record.adminid,jdbcType=INTEGER},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.starttime != null" >
+        starttime = #{record.starttime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.endtime != null" >
+        endtime = #{record.endtime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paperMinute != null" >
+        paper_minute = #{record.paperMinute,jdbcType=INTEGER},
+      </if>
+      <if test="record.showScoretime != null" >
+        show_scoretime = #{record.showScoretime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.totalScore != null" >
+        total_score = #{record.totalScore,jdbcType=INTEGER},
+      </if>
+      <if test="record.remark != null" >
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.qorder != null" >
+        qorder = #{record.qorder,jdbcType=VARCHAR},
+      </if>
+      <if test="record.postdate != null" >
+        postdate = #{record.postdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paperStatus != null" >
+        paper_status = #{record.paperStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paperState != null" >
+        paper_state = #{record.paperState,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update ys_paper
+    set paper_id = #{record.paperId,jdbcType=INTEGER},
+      paper_name = #{record.paperName,jdbcType=VARCHAR},
+      adminid = #{record.adminid,jdbcType=INTEGER},
+      status = #{record.status,jdbcType=INTEGER},
+      starttime = #{record.starttime,jdbcType=VARCHAR},
+      endtime = #{record.endtime,jdbcType=VARCHAR},
+      paper_minute = #{record.paperMinute,jdbcType=INTEGER},
+      show_scoretime = #{record.showScoretime,jdbcType=VARCHAR},
+      total_score = #{record.totalScore,jdbcType=INTEGER},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      qorder = #{record.qorder,jdbcType=VARCHAR},
+      postdate = #{record.postdate,jdbcType=VARCHAR},
+      paper_status = #{record.paperStatus,jdbcType=VARCHAR},
+      paper_state = #{record.paperState,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ysusoftedu.pojo.YsPaper" >
+    update ys_paper
+    <set >
+      <if test="paperName != null" >
+        paper_name = #{paperName,jdbcType=VARCHAR},
+      </if>
+      <if test="adminid != null" >
+        adminid = #{adminid,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="starttime != null" >
+        starttime = #{starttime,jdbcType=VARCHAR},
+      </if>
+      <if test="endtime != null" >
+        endtime = #{endtime,jdbcType=VARCHAR},
+      </if>
+      <if test="paperMinute != null" >
+        paper_minute = #{paperMinute,jdbcType=INTEGER},
+      </if>
+      <if test="showScoretime != null" >
+        show_scoretime = #{showScoretime,jdbcType=VARCHAR},
+      </if>
+      <if test="totalScore != null" >
+        total_score = #{totalScore,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="qorder != null" >
+        qorder = #{qorder,jdbcType=VARCHAR},
+      </if>
+      <if test="postdate != null" >
+        postdate = #{postdate,jdbcType=VARCHAR},
+      </if>
+      <if test="paperStatus != null" >
+        paper_status = #{paperStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="paperState != null" >
+        paper_state = #{paperState,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where paper_id = #{paperId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ysusoftedu.pojo.YsPaper" >
+    update ys_paper
+    set paper_name = #{paperName,jdbcType=VARCHAR},
+      adminid = #{adminid,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      starttime = #{starttime,jdbcType=VARCHAR},
+      endtime = #{endtime,jdbcType=VARCHAR},
+      paper_minute = #{paperMinute,jdbcType=INTEGER},
+      show_scoretime = #{showScoretime,jdbcType=VARCHAR},
+      total_score = #{totalScore,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      qorder = #{qorder,jdbcType=VARCHAR},
+      postdate = #{postdate,jdbcType=VARCHAR},
+      paper_status = #{paperStatus,jdbcType=VARCHAR},
+      paper_state = #{paperState,jdbcType=VARCHAR}
+    where paper_id = #{paperId,jdbcType=INTEGER}
+  </update>
+  
+  
+    <!-- 自己写的方法 -->
+    <select id="selectPaperByGroupId" resultMap="BaseResultMap"  >
+    select 
+    	ys_paper.*
+    from ys_paper join ys_paper_usergroup on ys_paper.paper_id = ys_paper_usergroup.paperid
+    where ys_paper_usergroup.usergroupid = #{id,jdbcType=INTEGER} and ys_paper.paper_id not in(select 
+     DISTINCT	ys_paper.paper_id
+    from ys_paper join ys_exam_detail  on ys_paper.paper_id = ys_exam_detail.pid
+		WHERE ys_exam_detail.uid = #{userId})
+  </select>
+  
+  
+    <select id="selectPaperById" resultMap="parperVoMap" parameterType="java.lang.Integer" >
+	select p.*,c.*,q.*,qo.* from ys_paper p  join ys_paper_question pq on p.paper_id = pq.pid
+		join ys_code c on pq.qtypt = c.qtype
+		join ys_question q on pq.yqid = q.question_id
+		join ys_question_options qo on q.question_id = qo.qid
+		
+		
+		where p.paper_id=#{id}
+  	</select>
+  	  <resultMap id="parperVoMap" type="com.ysusoftedu.pojo.vo.YsPaperVo" >
+		    <id column="paper_id" property="paperId" jdbcType="INTEGER" />
+		    <result column="paper_name" property="paperName" jdbcType="VARCHAR" />
+		    <result column="adminid" property="adminid" jdbcType="INTEGER" />
+		  <!--   <result column="status" property="status" jdbcType="INTEGER" /> -->
+		    <result column="starttime" property="starttime" jdbcType="VARCHAR" />
+		    <result column="endtime" property="endtime" jdbcType="VARCHAR" />
+		    <result column="paper_minute" property="paperMinute" jdbcType="INTEGER" />
+		    <result column="show_scoretime" property="showScoretime" jdbcType="VARCHAR" />
+		    <result column="total_score" property="totalScore" jdbcType="INTEGER" />
+		    <result column="remark" property="remark" jdbcType="VARCHAR" />
+		    <result column="qorder" property="qorder" jdbcType="VARCHAR" />
+		    <result column="postdate" property="postdate" jdbcType="VARCHAR" />
+		    <result column="paper_status" property="paperStatus" jdbcType="VARCHAR" />
+		    <result column="paper_state" property="paperState" jdbcType="VARCHAR" />
+		   <collection property="codes" ofType="com.ysusoftedu.pojo.vo.YsCodeVo">
+		   		<id column="qtype" property="qtype" jdbcType="INTEGER" />
+			    <result column="status" property="status" jdbcType="INTEGER" />
+			    <result column="statusName" property="statusname" jdbcType="VARCHAR" />
+			    <result column="qtypeName" property="qtypename" jdbcType="VARCHAR" />
+			    <result column="examStatus" property="examstatus" jdbcType="INTEGER" />
+			    <result column="examStauName" property="examstauname" jdbcType="VARCHAR" />
+				<collection property="questions" ofType="com.ysusoftedu.pojo.vo.YsQuestionVo">
+				    <id column="question_id" property="questionId" jdbcType="INTEGER" />
+				    <result column="dbid" property="dbid" jdbcType="INTEGER" />
+				    <result column="qtype" property="qtype" jdbcType="INTEGER" /> 
+				 <!--    <result column="status" property="status" jdbcType="VARCHAR" /> -->
+				    <result column="adminid" property="adminid" jdbcType="INTEGER" />
+				  <!--   <result column="states" property="states" jdbcType="INTEGER" /> -->
+				    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+				    <result column="skey" property="skey" jdbcType="LONGVARCHAR" />
+				    <result column="keydesc" property="keydesc" jdbcType="LONGVARCHAR" />
+				    <collection property="options" ofType="com.ysusoftedu.pojo.YsQuestionOptions">
+					    <id column="question_option_id" property="questionOptionId" jdbcType="INTEGER" />
+					    <result column="salisa" property="salisa" jdbcType="VARCHAR" />
+					    <result column="qid" property="qid" jdbcType="INTEGER" />
+					    <result column="soption" property="soption" jdbcType="VARCHAR" />
+					</collection>
+				</collection>
+			</collection>
+		    
+  </resultMap>
+  
+  
+  <update id="autoPaper">
+  	update ys_exam_detail yed set score = (
+	select t.res from 
+	( select ed.id,IF(ed.user_answer=q.skey,pq.score,0) res from ys_exam_detail ed
+	join ys_question q on ed.qid = q.question_id
+	join ys_paper_question pq on ed.qid = pq.yqid and ed.pid = pq.pid
+	where ed.pid in (select ys_paper.paper_id from ys_paper where show_scoretime BETWEEN  #{start} and #{end})) t
+	where t.id = yed.id
+	)
+  
+  </update>
+  
+  
+  
+  
+  
+</mapper>

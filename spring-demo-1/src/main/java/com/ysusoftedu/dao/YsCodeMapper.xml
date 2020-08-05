@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ysusoftedu.dao.YsCodeMapper" >
+  <resultMap id="BaseResultMap" type="com.ysusoftedu.pojo.YsCode" >
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="statusName" property="statusname" jdbcType="VARCHAR" />
+    <result column="qtype" property="qtype" jdbcType="INTEGER" />
+    <result column="qtypeName" property="qtypename" jdbcType="VARCHAR" />
+    <result column="examStatus" property="examstatus" jdbcType="INTEGER" />
+    <result column="examStauName" property="examstauname" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    status, statusName, qtype, qtypeName, examStatus, examStauName
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ysusoftedu.pojo.YsCodeExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ys_code
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.ysusoftedu.pojo.YsCodeExample" >
+    delete from ys_code
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ysusoftedu.pojo.YsCode" >
+    insert into ys_code (status, statusName, qtype, 
+      qtypeName, examStatus, examStauName
+      )
+    values (#{status,jdbcType=INTEGER}, #{statusname,jdbcType=VARCHAR}, #{qtype,jdbcType=INTEGER}, 
+      #{qtypename,jdbcType=VARCHAR}, #{examstatus,jdbcType=INTEGER}, #{examstauname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ysusoftedu.pojo.YsCode" >
+    insert into ys_code
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="statusname != null" >
+        statusName,
+      </if>
+      <if test="qtype != null" >
+        qtype,
+      </if>
+      <if test="qtypename != null" >
+        qtypeName,
+      </if>
+      <if test="examstatus != null" >
+        examStatus,
+      </if>
+      <if test="examstauname != null" >
+        examStauName,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="statusname != null" >
+        #{statusname,jdbcType=VARCHAR},
+      </if>
+      <if test="qtype != null" >
+        #{qtype,jdbcType=INTEGER},
+      </if>
+      <if test="qtypename != null" >
+        #{qtypename,jdbcType=VARCHAR},
+      </if>
+      <if test="examstatus != null" >
+        #{examstatus,jdbcType=INTEGER},
+      </if>
+      <if test="examstauname != null" >
+        #{examstauname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ysusoftedu.pojo.YsCodeExample" resultType="java.lang.Integer" >
+    select count(*) from ys_code
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update ys_code
+    <set >
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.statusname != null" >
+        statusName = #{record.statusname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.qtype != null" >
+        qtype = #{record.qtype,jdbcType=INTEGER},
+      </if>
+      <if test="record.qtypename != null" >
+        qtypeName = #{record.qtypename,jdbcType=VARCHAR},
+      </if>
+      <if test="record.examstatus != null" >
+        examStatus = #{record.examstatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.examstauname != null" >
+        examStauName = #{record.examstauname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update ys_code
+    set status = #{record.status,jdbcType=INTEGER},
+      statusName = #{record.statusname,jdbcType=VARCHAR},
+      qtype = #{record.qtype,jdbcType=INTEGER},
+      qtypeName = #{record.qtypename,jdbcType=VARCHAR},
+      examStatus = #{record.examstatus,jdbcType=INTEGER},
+      examStauName = #{record.examstauname,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

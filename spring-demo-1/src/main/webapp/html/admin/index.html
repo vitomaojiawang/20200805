@@ -1,0 +1,233 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9, IE=8">
+    <title>燕软在线教育</title>
+    <link type="text/css" href="../../static/admin/css/layout.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="../../static/common/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../../static/common/admin/js/admin-inxedu.js"></script>
+    <script type="text/javascript" src="../../static/common/webutils.js"></script>
+
+    <meta charset="utf-8" http-equiv="Content-Type" />
+    <!-- End of Meta -->
+
+    <!-- Page title -->
+
+    <!-- End of Page title -->
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <script type="text/javascript" src="../../static/admin/js/easyTooltip.js"></script>
+    <script type="text/javascript" src="../../static/admin/js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="../../static/admin/js/jquery.wysiwyg.js"></script>
+    <script type="text/javascript" src="../../static/admin/js/hoverIntent.js"></script>
+    <script type="text/javascript" src="../../static/admin/js/superfish.js"></script>
+    <script type="text/javascript" src="../../static/admin/js/custom.js"></script>
+    <!-- End of Libraries -->
+    <script type="text/javascript">
+        /*sMenu*/
+        $(function() {
+            $("#ui-sMenu>div").each(function() {
+                var _this = $(this),
+                        _oT = _this.find("h3"),
+                        _oTi = _oT.find(".ui-icon"),
+                        _oC = _oT.next("div");
+                _oT.click(function() {
+                    if(_oC.is(":hidden")) {
+                        $("#ui-sMenu>div h3").removeClass("ui-state-active ui-corner-top").addClass("ui-state-default ui-corner-all");
+                        $("#ui-sMenu>div .ui-icon").removeClass("ui-icon-triangle-1-s").addClass("ui-icon-triangle-1-e");
+                        $("#ui-sMenu>div div").slideUp("fast");
+
+                        _oT.removeClass("ui-state-default ui-corner-all").addClass("ui-state-active ui-corner-top");
+                        _oTi.removeClass("ui-icon-triangle-1-e").addClass("ui-icon-triangle-1-s");
+                        _oC.slideDown("fast");
+                    } else {
+                        _oT.removeClass("ui-state-active ui-corner-top").addClass("ui-state-default ui-corner-all");
+                        _oTi.removeClass("ui-icon-triangle-1-s").addClass("ui-icon-triangle-1-e");
+                        _oC.slideUp("fast");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<!-- Container -->
+<div class="tHeader headerimg">
+    <div id="container">
+        <!-- Header -->
+        <div id="header">
+
+            <!-- Top -->
+            <div id="top">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#" target="_blank" title="燕软在线教育" class="tooltip">
+                        <img src="../../static/admin/assets/logo.png" height="60" alt="燕软在线教育" />
+                    </a>
+                </div>
+                <!-- End of Logo -->
+
+                <!-- Meta information -->
+                <div class="meta">
+                    <p>欢迎来到燕软在线教育后台管理系统!</p>
+                    <ul>
+                        <li>
+                            <a href="#" title="退出系统" class="tooltip">
+                                <span class="ui-icon ui-icon-power"></span>
+                                退出系统
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="content" title="权限设置" class="tooltip">
+                                <span class="ui-icon ui-icon-wrench"></span>
+                                个人资料
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" title="admin" class="tooltip">
+                                <span class="ui-icon ui-icon-person"></span>admin</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End of Meta information -->
+            </div>
+            <!-- End of Top-->
+
+        </div>
+    </div>
+</div>
+<!-- End of Header -->
+<div id="container">
+
+    <!-- Background wrapper -->
+    <div id="bgwrap">
+        <!-- Main Content -->
+        <div id="content">
+            <div id="main">
+                <iframe name="content" scrolling="auto" frameborder="0"  height="750" width="100%"></iframe>
+            </div>
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+
+            <h2>菜单目录 / MENU</h2>
+            <!-- Accordion -->
+            <div id="ui-sMenu" class="ui-accordion ui-widget ui-helper-reset">
+                <div>
+                    <h3 class="ui-accordion-header ui-helper-reset ui-state-active ui-corner-top">
+                        <span class="ui-icon ui-icon-triangle-1-s"></span>
+                        <a href="javascript:void(0)" title="系统管理" class="tooltip">系统管理</a>
+                    </h3>
+                    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: block;">
+                        <dl class="acd-sub-dl">
+                            <dt>
+                                <a href="sysfunction/showfunctionztree.html" target="content" title="权限树">权限树</a>
+                            </dt>
+                        </dl>
+                        <dl class="acd-sub-dl">
+                            <dt>
+                                <a href="sysfunction/showroleList.html" target="content" title="角色管理">角色管理</a>
+                            </dt>
+                        </dl>
+                        <dl class="acd-sub-dl">
+                            <dt>
+                                <a href="sysfunction/userlist.html" target="content" title="用户管理">用户列表</a>
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all">
+                        <span class="ui-icon ui-icon-triangle-1-e"></span>
+                        <a href="javascript:void(0)" title="用户管理" class="tooltip">学员管理</a>
+                    </h3>
+                    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+                        <dl class="acd-sub-dl">
+                            <dt>
+                                <a href="student/studentlist.html" target="content" title="学员组管理">学员组管理</a>
+                            </dt>
+                        </dl>
+                        <dl class="acd-sub-dl">
+                            <dt>
+                                <a href="student/studentlist.html" target="content" title="学员列表">学员列表</a>
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all">
+                        <span class="ui-icon ui-icon-triangle-1-e"></span>
+                        <a href="javascript:void(0)" title="考试管理" class="tooltip">考试管理</a>
+                    </h3>
+                    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+                        <dl class="acd-sub-dl">
+                            <dt>
+                                <a href="exam/questionDb.html" target="content" title="题库列表">题库列表</a>
+                            </dt>
+                        </dl>
+                        <dl class="acd-sub-dl">
+                            <dt>
+                                <a href="exam/question.html" target="content" title="试题列表">试题列表</a>
+                            </dt>
+                        </dl>
+                        <dl class="acd-sub-dl">
+                            <dt>
+                                <a href="exam/questionPage.html" target="content" title="试卷列表">试卷列表</a>
+                            </dt>
+                        </dl>
+
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all">
+                        <span class="ui-icon ui-icon-triangle-1-e"></span>
+                        <a href="javascript:void(0)" title="考试管理" class="tooltip">考试分析</a>
+                    </h3>
+                    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+                        <dl class="acd-sub-dl">
+                            <dt>
+                                <a href="examanalyse/scoreAnalyse.html" target="content" title="成绩分布">成绩分布</a>
+                            </dt>
+                        </dl>
+                        <dl class="acd-sub-dl">
+                            <dt>
+                                <a href="examanalyse/questionAnalyse.html" target="content" title="考试分析">考试分析</a>
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+
+
+        </div>
+        <!-- End of Sidebar -->
+
+    </div>
+    <!-- End of bgwrap -->
+</div>
+<!-- End of Container -->
+
+<!-- Footer -->
+<div id="footer">
+    <p class="mid">©2010-2015 燕软教育</p>
+    <p class="mid">
+        Powered By <a target="_blank" href="http://demo1.inxedu.com/" style="color: #666;">燕软在线教育软件</a>
+    </p>
+</div>
+<script>
+    $(function(){
+        $("section").hide();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,713 @@
+
+<!DOCTYPE HTML>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <title>课程列表-燕软在线教育</title>
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../../../static/inxweb/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/inxweb/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/inxweb/css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/inxweb/css/web.css">
+    <link href="../../../static/inxweb/css/mw_320_768.css" rel="stylesheet" type="text/css" media="screen and (min-width: 320px) and (max-width: 768px)">
+    <!--[if lt IE 9]>
+    <script src="../../../static/common/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="../../../static/common/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="../../../static/common/webutils.js"></script>
+    <script type="text/javascript" src="../../../static/inxweb/header/header.js"></script>
+    <script type="text/javascript" src="../../../static/inxweb/js/common.js"></script>
+
+</head>
+<body class="W-body">
+
+<!-- /global header begin-->
+<header id="header">
+    <section class="container">
+        <h1 id="logo">
+            <a href="../../../" title="燕软在线教育软件">
+                <img src="../../../static/admin/assets/logo.png" width="100%" alt="燕软在线教育软件">
+            </a>
+        </h1>
+        <div class="h-r-nsl">
+            <ul class="nav">
+                <li><a href="../index.html" title="首页" >首页</a></li>
+                <li><a href="../course/courseIndex.html" title="课程" >课程</a></li>
+                <li><a href="../teacher/tercherIndex.html" title="名师" >名师</a></li>
+                <li><a href="../acticle/acticleIndex.html" title="文章" >文章</a></li>
+            </ul>
+            <!-- / nav -->
+            <ul class="h-r-login">
+
+                <li class="undis" id="no-login">
+                    <a href="javascript:lrFun(1)" title="登录">
+                        <em class="icon18 login-icon">&nbsp;</em><span class="vam ml5">登录</span>
+                    </a>
+                    |
+                    <a href="javascript:lrFun(2)" title="注册">
+                        </em><span class="vam ml5">注册</span>
+                    </a>
+                </li>
+
+                <li class="mr10 undis" id="is-login-one"><a href="succIndex.html" title="消息" id="headerMsgCountId">
+                    <em class="icon18 news-icon">&nbsp;</em>
+                </a><q class="red-point" style="display: none">&nbsp;</q></li>
+
+                <li class="h-r-user undis" id="is-login-two"><a href="../../uc/index" title="">
+                    <img src="../../../static/inxweb/img/avatar-boy.gif" width="30" height="30" class="vam picImg" alt="">
+                    <span class="vam disIb" id="userName"></span>
+                </a>
+                    <a href="javascript:void(0)" title="退出" onclick="exit();" class="ml5">退出</a></li>
+
+                <!-- /未登录显示第1 li；登录后显示第2，3 li -->
+            </ul>
+            <aside class="h-r-search">
+                <form action="../../front/showcoulist" method="post">
+                    <label class="h-r-s-box"><input type="text" placeholder="输入你想学的课程" name="queryCourse.courseName" value="">
+                        <button type="submit" class="s-btn">
+                            <em class="icon18">&nbsp;</em>
+                        </button></label>
+                </form>
+            </aside>
+        </div>
+        <aside class="mw-nav-btn">
+            <div class="mw-nav-icon"></div>
+        </aside>
+        <div class="clear"></div>
+    </section>
+</header>
+
+<div id="aCoursesList" class="bg-fa of">
+    <section class="container">
+        <section class="i-article">
+            <div class="fl col-7">
+                <section class="mr30">
+                    <header class="comm-title all-article-title">
+                        <h2 class="fl tac">
+                            <span class="c-333">文章</span>
+                        </h2>
+                        <section class="c-tab-title">
+                            <a href="javascript: void(0)">&nbsp;</a>
+                        </section>
+                    </header>
+                    <!-- /无数据提示 开始-->
+                    <!-- /无数据提示 结束-->
+                    <article class="i-article-list">
+                        <!-- /文章列表 开始-->
+                        <ul>
+                            <li>
+                                <aside class="i-article-pic">
+                                    <img xsrc="../../../images/upload/article/20150928/1443424285823.jpg" src="../../../images/upload/article/20150928/1443424285823.jpg" alt="雅思阅读能力提高有方法 文章精读可以这样做">
+                                </aside> <!-- ../../../web/article/showInfor/23 -->
+                                <h3 class="hLh30 txtOf">
+                                    <a href="acticleDetail.html" title="雅思阅读能力提高有方法 文章精读可以这样做" class="i-art-title">雅思阅读能力提高有方法 文章精读可以这样做</a>
+                                </h3>
+                                <section class="i-q-txt mt5 i-q-txt2">
+                                    <p>
+                                        <span class="c-999 f-fA">雅思阅读能力提高有方法 文章精读可以这样做</span>
+                                    </p>
+                                </section>
+                                <section class="hLh30 txtOf mt5 pr10 a-list-extrainfo">
+												<span class="fr"><tt class="c-999 f-fM">
+                                                    <!-- 1小时前发布 -->
+                                                    2016-02-26 10:31</tt></span>
+                                    <div class="fl">
+													<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/23.html">
+                                                        <em class="icon18">&nbsp;</em>(<span>1</span>)
+                                                    </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('23',3)">
+                                                        <em class="icon18">&nbsp;</em>(<span class="addPraise23_3 praiseCount">1</span>)
+                                                    </tt>
+													</span>
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <aside class="i-article-pic">
+                                    <img xsrc="../../../images/upload/article/20151104/1446603563667.jpg" src="../../../images/upload/article/20151104/1446603563667.jpg" alt="关注·底层教育梦：先天不足 后天亏损？">
+                                </aside> <!-- ../../../web/article/showInfor/26 -->
+                                <h3 class="hLh30 txtOf">
+                                    <a href="acticleDetail.html" title="关注·底层教育梦：先天不足 后天亏损？" class="i-art-title">关注·底层教育梦：先天不足 后天亏损？</a>
+                                </h3>
+                                <section class="i-q-txt mt5 i-q-txt2">
+                                    <p>
+                                        <span class="c-999 f-fA">关注·底层教育梦：先天不足 后天亏损？</span>
+                                    </p>
+                                </section>
+                                <section class="hLh30 txtOf mt5 pr10 a-list-extrainfo">
+												<span class="fr"><tt class="c-999 f-fM">
+                                                    <!-- 1小时前发布 -->
+                                                    2015-09-28 16:12</tt></span>
+                                    <div class="fl">
+													<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/26.html">
+                                                        <em class="icon18">&nbsp;</em>(<span>0</span>)
+                                                    </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('26',3)">
+                                                        <em class="icon18">&nbsp;</em>(<span class="addPraise26_3 praiseCount">0</span>)
+                                                    </tt>
+													</span>
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <aside class="i-article-pic">
+                                    <img xsrc="../../../images/upload/article/20150928/1443424120422.jpg" src="../../../images/upload/article/20150928/1443424120422.jpg" alt="哈佛商学院院长：21世纪人人都需要创业精神">
+                                </aside> <!-- ../../../web/article/showInfor/22 -->
+                                <h3 class="hLh30 txtOf">
+                                    <a href="../../../front/articleinfo/22.html" title="哈佛商学院院长：21世纪人人都需要创业精神" class="i-art-title">哈佛商学院院长：21世纪人人都需要创业精神</a>
+                                </h3>
+                                <section class="i-q-txt mt5 i-q-txt2">
+                                    <p>
+                                        <span class="c-999 f-fA">哈佛商学院院长：21世纪人人都需要创业精神</span>
+                                    </p>
+                                </section>
+                                <section class="hLh30 txtOf mt5 pr10 a-list-extrainfo">
+												<span class="fr"><tt class="c-999 f-fM">
+                                                    <!-- 1小时前发布 -->
+                                                    2015-09-28 15:08</tt></span>
+                                    <div class="fl">
+													<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/22.html">
+                                                        <em class="icon18">&nbsp;</em>(<span>0</span>)
+                                                    </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('22',3)">
+                                                        <em class="icon18">&nbsp;</em>(<span class="addPraise22_3 praiseCount">0</span>)
+                                                    </tt>
+													</span>
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <aside class="i-article-pic">
+                                    <img xsrc="../../../images/upload/article/20151104/1446603599362.jpeg" src="../../../images/upload/article/20151104/1446603599362.jpeg" alt="美国教授：求知是为了看世界 不是让世界看你">
+                                </aside> <!-- ../../../web/article/showInfor/21 -->
+                                <h3 class="hLh30 txtOf">
+                                    <a href="../../../front/articleinfo/21.html" title="美国教授：求知是为了看世界 不是让世界看你" class="i-art-title">美国教授：求知是为了看世界 不是让世界看你</a>
+                                </h3>
+                                <section class="i-q-txt mt5 i-q-txt2">
+                                    <p>
+                                        <span class="c-999 f-fA">美国教授：求知是为了看世界 不是让世界看你</span>
+                                    </p>
+                                </section>
+                                <section class="hLh30 txtOf mt5 pr10 a-list-extrainfo">
+												<span class="fr"><tt class="c-999 f-fM">
+                                                    <!-- 1小时前发布 -->
+                                                    2015-09-28 15:04</tt></span>
+                                    <div class="fl">
+													<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/21.html">
+                                                        <em class="icon18">&nbsp;</em>(<span>0</span>)
+                                                    </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('21',3)">
+                                                        <em class="icon18">&nbsp;</em>(<span class="addPraise21_3 praiseCount">0</span>)
+                                                    </tt>
+													</span>
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <aside class="i-article-pic">
+                                    <img xsrc="../../../images/upload/article/20150910/1441853518948.jpg" src="../../../images/upload/article/20150910/1441853518948.jpg" alt="MBA过来人亲述：联考英语复习经验">
+                                </aside> <!-- ../../../web/article/showInfor/20 -->
+                                <h3 class="hLh30 txtOf">
+                                    <a href="../../../front/articleinfo/20.html" title="MBA过来人亲述：联考英语复习经验" class="i-art-title">MBA过来人亲述：联考英语复习经验</a>
+                                </h3>
+                                <section class="i-q-txt mt5 i-q-txt2">
+                                    <p>
+                                        <span class="c-999 f-fA">　在各门科目之中，有两门课程是拉分最多的，一门是数学，一门是英语。其中英语是在多数考生最大的拦路虎，因为工作多年的人，如果工作中不常接触，英语的底子多是很差的。而英语是很难突击上去的，靠临时“抱佛脚”很难奏效。我英语基础较差，但经过自己有计划、有重点的系统复习，年MBA[微博]联考中，英语过了70分这道槛，取得了较为满意的结果，感到甚是欣慰。</span>
+                                    </p>
+                                </section>
+                                <section class="hLh30 txtOf mt5 pr10 a-list-extrainfo">
+												<span class="fr"><tt class="c-999 f-fM">
+                                                    <!-- 1小时前发布 -->
+                                                    2015-09-10 00:00</tt></span>
+                                    <div class="fl">
+													<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/20.html">
+                                                        <em class="icon18">&nbsp;</em>(<span>0</span>)
+                                                    </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('20',3)">
+                                                        <em class="icon18">&nbsp;</em>(<span class="addPraise20_3 praiseCount">0</span>)
+                                                    </tt>
+													</span>
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <aside class="i-article-pic">
+                                    <img xsrc="../../../images/upload/article/20150910/1441853023802.jpg" src="../../../images/upload/article/20150910/1441853023802.jpg" alt="中国首款学习习近平重要讲话APP上线">
+                                </aside> <!-- ../../../web/article/showInfor/7 -->
+                                <h3 class="hLh30 txtOf">
+                                    <a href="../../../front/articleinfo/7.html" title="中国首款学习习近平重要讲话APP上线" class="i-art-title">中国首款学习习近平重要讲话APP上线</a>
+                                </h3>
+                                <section class="i-q-txt mt5 i-q-txt2">
+                                    <p>
+                                        <span class="c-999 f-fA">“学习中国”APP得到了国家互联网信息办公室的支持与指导。</span>
+                                    </p>
+                                </section>
+                                <section class="hLh30 txtOf mt5 pr10 a-list-extrainfo">
+												<span class="fr"><tt class="c-999 f-fM">
+                                                    <!-- 1小时前发布 -->
+                                                    2015-09-09 10:08</tt></span>
+                                    <div class="fl">
+													<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/7.html">
+                                                        <em class="icon18">&nbsp;</em>(<span>0</span>)
+                                                    </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('7',3)">
+                                                        <em class="icon18">&nbsp;</em>(<span class="addPraise7_3 praiseCount">0</span>)
+                                                    </tt>
+													</span>
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <aside class="i-article-pic">
+                                    <img xsrc="../../../images/upload/article/20150910/1442305533342.jpg" src="../../../images/upload/article/20150910/1442305533342.jpg" alt="嘲讽陈年是很容易的事，但我更愿意祝他成功">
+                                </aside> <!-- ../../../web/article/showInfor/9 -->
+                                <h3 class="hLh30 txtOf">
+                                    <a href="../../../front/articleinfo/9.html" title="嘲讽陈年是很容易的事，但我更愿意祝他成功" class="i-art-title">嘲讽陈年是很容易的事，但我更愿意祝他成功</a>
+                                </h3>
+                                <section class="i-q-txt mt5 i-q-txt2">
+                                    <p>
+                                        <span class="c-999 f-fA">嘲讽陈年是很容易的事，但我更愿意祝他成功</span>
+                                    </p>
+                                </section>
+                                <section class="hLh30 txtOf mt5 pr10 a-list-extrainfo">
+												<span class="fr"><tt class="c-999 f-fM">
+                                                    <!-- 1小时前发布 -->
+                                                    2015-09-09 10:08</tt></span>
+                                    <div class="fl">
+													<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/9.html">
+                                                        <em class="icon18">&nbsp;</em>(<span>0</span>)
+                                                    </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('9',3)">
+                                                        <em class="icon18">&nbsp;</em>(<span class="addPraise9_3 praiseCount">0</span>)
+                                                    </tt>
+													</span>
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <aside class="i-article-pic">
+                                    <img xsrc="../../../images/upload/article/20150910/1441853211287.jpg" src="../../../images/upload/article/20150910/1441853211287.jpg" alt="陈年重回T恤大战：凡客归来">
+                                </aside> <!-- ../../../web/article/showInfor/11 -->
+                                <h3 class="hLh30 txtOf">
+                                    <a href="../../../front/articleinfo/11.html" title="陈年重回T恤大战：凡客归来" class="i-art-title">陈年重回T恤大战：凡客归来</a>
+                                </h3>
+                                <section class="i-q-txt mt5 i-q-txt2">
+                                    <p>
+                                        <span class="c-999 f-fA">凡客之路，兴于衬衫，成于T恤。2015年的春夏之交，凡客再次发布了自己的T恤，种种迹象表明，陈年与他的凡客，这一次要，归来。凡客能否重温2011年的T恤辉煌？</span>
+                                    </p>
+                                </section>
+                                <section class="hLh30 txtOf mt5 pr10 a-list-extrainfo">
+												<span class="fr"><tt class="c-999 f-fM">
+                                                    <!-- 1小时前发布 -->
+                                                    2015-09-09 10:08</tt></span>
+                                    <div class="fl">
+													<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/11.html">
+                                                        <em class="icon18">&nbsp;</em>(<span>0</span>)
+                                                    </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('11',3)">
+                                                        <em class="icon18">&nbsp;</em>(<span class="addPraise11_3 praiseCount">0</span>)
+                                                    </tt>
+													</span>
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <aside class="i-article-pic">
+                                    <img xsrc="../../../images/upload/article/20150910/1441853275555.jpg" src="../../../images/upload/article/20150910/1441853275555.jpg" alt="法国总理证实失事客机无人生还">
+                                </aside> <!-- ../../../web/article/showInfor/13 -->
+                                <h3 class="hLh30 txtOf">
+                                    <a href="../../../front/articleinfo/13.html" title="法国总理证实失事客机无人生还" class="i-art-title">法国总理证实失事客机无人生还</a>
+                                </h3>
+                                <section class="i-q-txt mt5 i-q-txt2">
+                                    <p>
+                                        <span class="c-999 f-fA">据美国《华盛顿邮报》3月24日报道，法国总理瓦尔斯称，一架直升机已尝试降落在坠毁地点附近，并未发现失事客机上有生还者</span>
+                                    </p>
+                                </section>
+                                <section class="hLh30 txtOf mt5 pr10 a-list-extrainfo">
+												<span class="fr"><tt class="c-999 f-fM">
+                                                    <!-- 1小时前发布 -->
+                                                    2015-09-09 10:08</tt></span>
+                                    <div class="fl">
+													<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/13.html">
+                                                        <em class="icon18">&nbsp;</em>(<span>0</span>)
+                                                    </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('13',3)">
+                                                        <em class="icon18">&nbsp;</em>(<span class="addPraise13_3 praiseCount">0</span>)
+                                                    </tt>
+													</span>
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <aside class="i-article-pic">
+                                    <img xsrc="../../../images/upload/article/20150910/1441853318496.jpg" src="../../../images/upload/article/20150910/1441853318496.jpg" alt="背水一战的任天堂">
+                                </aside> <!-- ../../../web/article/showInfor/14 -->
+                                <h3 class="hLh30 txtOf">
+                                    <a href="../../../front/articleinfo/14.html" title="背水一战的任天堂" class="i-art-title">背水一战的任天堂</a>
+                                </h3>
+                                <section class="i-q-txt mt5 i-q-txt2">
+                                    <p>
+                                        <span class="c-999 f-fA">面对所处的窘境，固执的任天堂也低下了他那傲娇的头，而如今啪啪啪打脸般的迈出了这一步，其实他也是被逼无奈的，或者说岩田聪已经没有什么更好的办法扭转颓势了</span>
+                                    </p>
+                                </section>
+                                <section class="hLh30 txtOf mt5 pr10 a-list-extrainfo">
+												<span class="fr"><tt class="c-999 f-fM">
+                                                    <!-- 1小时前发布 -->
+                                                    2015-09-09 10:08</tt></span>
+                                    <div class="fl">
+													<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/14.html">
+                                                        <em class="icon18">&nbsp;</em>(<span>0</span>)
+                                                    </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('14',3)">
+                                                        <em class="icon18">&nbsp;</em>(<span class="addPraise14_3 praiseCount">0</span>)
+                                                    </tt>
+													</span>
+                                    </div>
+                                </section>
+                            </li>
+                        </ul>
+                        <!-- /文章列表 结束-->
+                    </article>
+                    <!-- 公共分页 开始 -->
+                    <form action="../../../front/articlelist" method="post" id="searchForm">
+                        <input type="hidden" name="page.currentPage" id="pageCurrentPage" value="1">
+                    </form>
+                    <div>
+                        <script type="text/javascript" src="../../../static/common/web/js/page.js"></script>
+                        <div class="paging">
+                            <a href="javascript:goPage(1);" title="">首</a>
+                            <a id="backpage" class="undisable" href="javascript:void(0)" title="">&lt;</a>
+                            <a href="javascript:void(0)" title="" class="current undisable">1</a><a href="javascript:goPage(2)" title="">2</a><a id="nextpage" href="javascript:goPage(2);" title="">&gt;</a>
+                            <a href="javascript:goPage(2);" title="">末</a>
+                            <div class="clear"></div>
+                        </div>
+
+
+                        <script type="text/javascript">
+                            var totalPageSize =2;
+                            var currentPage =
+                                    0<1 ? 1 :1;
+                            var totalPage = 2;
+                            showPageNumber();
+                        </script><div class="clear"></div>
+                    </div>
+                    <!-- 公共分页 结束 -->
+                </section>
+            </div>
+            <!-- 好文推荐 -->
+            <aside class="fl col-3 articleRecommend"><div>
+                <header class="comm-title all-article-title">
+                    <h2 class="fl tac">
+                        <span class="c-333">文章排行榜</span>
+                    </h2>
+                    <section class="c-tab-title">
+                        <a href="javascript: void(0)">&nbsp;</a>
+                    </section>
+                </header>
+                <section class="i-article-list r-art-wrap">
+                    <ul>
+                        <li class="lt2">
+                            <aside class="orderNum"><span>1</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/23.html" title="雅思阅读能力提高有方法 文章精读可以这样做" class="i-art-title">雅思阅读能力提高有方法 文章精读可以这样做</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/23.html">
+                                    <em class="icon18">&nbsp;</em>(1)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('23',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise23_3 praiseCount">1</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2016-02-26 10:31</tt></span>
+                            </section>
+                        </li>
+                        <li class="lt2">
+                            <aside class="orderNum"><span>2</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/17.html" title="中国军舰协助英、德等10国从也门撤侨225人" class="i-art-title">中国军舰协助英、德等10国从也门撤侨225人</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/17.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('17',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise17_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-09 10:08</tt></span>
+                            </section>
+                        </li>
+                        <li class="lt2">
+                            <aside class="orderNum"><span>3</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/20.html" title="MBA过来人亲述：联考英语复习经验" class="i-art-title">MBA过来人亲述：联考英语复习经验</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/20.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('20',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise20_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-10 00:00</tt></span>
+                            </section>
+                        </li>
+                        <li>
+                            <aside class="orderNum"><span>4</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/7.html" title="中国首款学习习近平重要讲话APP上线" class="i-art-title">中国首款学习习近平重要讲话APP上线</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/7.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('7',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise7_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-09 10:08</tt></span>
+                            </section>
+                        </li>
+                        <li>
+                            <aside class="orderNum"><span>5</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/14.html" title="背水一战的任天堂" class="i-art-title">背水一战的任天堂</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/14.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('14',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise14_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-09 10:08</tt></span>
+                            </section>
+                        </li>
+                        <li>
+                            <aside class="orderNum"><span>6</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/9.html" title="嘲讽陈年是很容易的事，但我更愿意祝他成功" class="i-art-title">嘲讽陈年是很容易的事，但我更愿意祝他成功</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/9.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('9',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise9_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-09 10:08</tt></span>
+                            </section>
+                        </li>
+                        <li>
+                            <aside class="orderNum"><span>7</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/15.html" title="渠道之殇：三星手机中国没落背后" class="i-art-title">渠道之殇：三星手机中国没落背后</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/15.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('15',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise15_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-09 10:08</tt></span>
+                            </section>
+                        </li>
+                        <li>
+                            <aside class="orderNum"><span>8</span></aside>
+                            <h3 class="hLh30 txtOf">
+                                <a href="../../../front/articleinfo/11.html" title="陈年重回T恤大战：凡客归来" class="i-art-title">陈年重回T恤大战：凡客归来</a>
+                            </h3>
+                            <section class="hLh30 txtOf mt5">
+                                <div class="fr">
+								<span> <a class="noter-dy vam" title="回答" href="../../../front/articleinfo/11.html">
+                                    <em class="icon18">&nbsp;</em>(0)
+                                </a> <tt title="赞一下" class="noter-zan vam ml10 f-fM" onclick="addPraise('11',3)">
+                                    <em class="icon18">&nbsp;</em>(<span class="addPraise11_3 praiseCount">0</span>)
+                                </tt>
+								</span>
+                                </div>
+							<span class="fl"><tt class="c-999 f-fM">
+                                <!-- 1小时前发布 -->
+                                2015-09-09 10:08</tt></span>
+                            </section>
+                        </li>
+                    </ul>
+                </section>
+                <section style="margin-bottom: 20px;">
+                    <a href="/" title="文章列表"><img src="../../../images/upload/image/20150908/1442225242188.jpg" width="100%" alt="文章列表"></a>
+                </section>
+            </div>
+            </aside>
+            <div class="clear"></div>
+        </section>
+    </section>
+    <!-- /文章列表 结束 -->
+</div>
+
+<script>
+    $(function() {
+       // articleRecommend();//好文推荐
+        scrollLoad(); //响应滚动加载课程图片
+    });
+
+    //好文推荐
+    function articleRecommend() {
+        $.ajax({
+            url : baselocation + '/front/ajax/recommend',
+            type : 'post',
+            async : true,
+            dataType : 'text',
+            success : function(result) {
+                $(".articleRecommend").html(result);
+            }
+        });
+    }
+
+    // 增加文章浏览量
+    function updateArticleClickNum() {
+        jQuery.ajax({
+            url : baselocation+'/front/updateArticleClickNum/' + articleId,
+            type : 'post',
+            dataType : 'json',
+            success : function(result) {
+                if (result.success == true) {
+                    jQuery(".clickNum").text(result.entity.clickNum);
+                    $(".praiseCount").html(result.entity.praiseCount);
+                }
+            }
+        });
+    }
+    /*
+     * 点赞
+     * targetId 点赞的目标id
+     * type 点赞类型 1问答点赞 2问答评论点赞
+     * obj 当前标签对象
+     */
+    function addActiclePraise(targetId,type){
+        if(isLogin()){
+            $.ajax({
+                url:"/praise/ajax/add",
+                data:{
+                    "praise.targetId":targetId,
+                    "praise.type":type
+                },
+                type:"post",
+                dataType:"json",
+                async:true,
+                success:function(result){
+                    if(result.success==true){
+                        //点赞效果
+                        var _dznum = $(".dz-btn").siblings(".dz-num");
+                        _dznum.stop().animate({"opacity" : "0" , "bottom" : "90px"}, 1000, function() {
+                            _dznum.css({"opacity" : "1" , "bottom" : "-24px"})
+                        });
+
+                        dialog('提示',"点赞成功",0);
+                        //点赞数加一
+                        var praiseNum = $(".addPraise"+targetId+"_"+type).html();
+                        $(".addPraise"+targetId+"_"+type).html(praiseNum*1+1);
+                    }else{
+                        dialog('提示',result.message,1);
+                    }
+                }
+            })
+        }else{
+            //先关闭 弹出
+            $("#tisbutt,.dClose,#qujiao").click();
+            lrFun();
+        }
+    }
+</script>
+
+
+<!-- 公共底引入 -->
+<footer id="footer">
+    <section class="container">
+        <div class="">
+            <h4 class="hLh30">
+                <span class="fsize18 f-fM c-999">友情链接</span>
+            </h4>
+            <ul class="of flink-list">
+                <li><a href="http://www.ysusoft.com" title="燕软集团" target="_blank">燕软集团</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="b-foot">
+            <section class="fl col-7">
+                <section class="mr20">
+                    <section class="b-f-link">
+                        <a href="/front/helpCenter?id=193" title="关于我们" target="_blank">关于我们</a>|
+                        <a href="/front/helpCenter?id=194" title="联系我们" target="_blank">联系我们</a>|
+                        <a href="#" title="成功案例" target="_blank">成功案例</a>|
+                        <a href="/front/helpCenter" title="帮助中心" target="_blank">帮助中心</a>|
+                        <span>服务热线：XXXXXXX</span> <span>XXXXXXX</span>
+                    </section>
+                    <section class="b-f-link mt10">
+                        <span>燕软教育职业培训学校</span>
+                    </section>
+                </section>
+            </section>
+            <aside class="fl col-3 tac mt15">
+                <section class="gf-tx">
+                    <span><img src="../../../static/inxweb/img/wx-icon.png" alt=""></span>
+                    <div class="gf-tx-ewm">
+                        <img src="../../../images/upload/image/20150908/1441801228269.png" alt="">
+                    </div>
+                </section>
+            </aside>
+            <div class="clear"></div>
+        </div>
+    </section>
+</footer>
+<div class="r-fixed-wrap">
+    <ul class="r-fixed-ul">
+        <li id="goTopBtn" class="undis">
+            <a href="javascript: void(0)" title="返回顶部" class="bg-orange">
+                <em class="r-f-icon-3">&nbsp;</em><span>返回顶部</span>
+            </a>
+        </li>
+        <li class="foot-zixun">
+            <a href="" title="在线咨询" class="bg-orange">
+                <em class="r-f-icon-1">&nbsp;</em><span>在线咨询</span>
+            </a>
+        </li>
+        <li class="foot-zixun">
+            <a href="" title="扫描关注" class="bg-orange">
+                <em class="r-f-icon-2">&nbsp;</em><span>扫描关注</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- 公共底引入 -->
+<!-- 统计代码 -->
+</body>
+</html>
