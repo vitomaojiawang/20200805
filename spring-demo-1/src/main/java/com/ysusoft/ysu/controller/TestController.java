@@ -22,6 +22,7 @@ public class TestController {
 	@ResponseBody
 	public String test() {
 		userService.insertUsers();
+		System.out.println(123);
 		return "hello spring boot";
 	}
 	
